@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Artificial Intelligence - Study Guide</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        h1 {
+            color: #bb86fc;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        /* Tab Navigation Styles */
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .tab-button {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 10px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .tab-button:hover {
+            background-color: #2c2c2c;
+            border-color: #bb86fc;
+        }
+        .tab-button.active {
+            background-color: #bb86fc;
+            color: #121212;
+            border-color: #bb86fc;
+        }
+
+        /* Tab Content Styles */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #03dac6;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .question {
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            margin-top: 25px;
+        }
+        .answer {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #333;
+        }
+        .note {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        ul {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Artificial Intelligence <br> Complete Study Guide</h1>
+
+    <!-- Tab Navigation -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab('module1', this)">Module 1: Intro & Agents</button>
+        <button class="tab-button" onclick="openTab('module2', this)">Module 2: Logic & Reasoning</button>
+    </div>
+
+    <!-- MODULE 1 CONTENT -->
+    <div id="module1" class="tab-content active">
+        <h2>A. Two-Mark Questions (Short Answer)</h2>
+        <div class="qa-block">
+            <div class="question">1. Define Artificial Intelligence (AI).</div>
+            <div class="answer">AI is a system that observes its environment, processes inputs, and takes actions to achieve a specific goal.</div>
+
+            <div class="question">2. State any two objectives of Artificial Intelligence.</div>
+            <div class="answer">1) To build systems that exhibit intelligent behavior, learn, and advise humans. <br> 2) To understand and model human cognitive processes computationally.</div>
+
+            <div class="question">3. What is meant by an intelligent agent?</div>
+            <div class="answer">An intelligent agent is a system that uses sensors to gather data from its environment and applies decision rules or learning methods to choose the right action to achieve a goal.</div>
+
+            <div class="question">4. Define a rational agent.</div>
+            <div class="answer">A rational agent is one that acts to maximize its expected performance measure based on the data it has perceived and its built-in knowledge.</div>
+
+            <div class="question">5. List any two foundations of Artificial Intelligence.</div>
+            <div class="answer">Philosophy (logic, reasoning, mind) and Mathematics (probability, algorithms, optimization).</div>
+
+            <div class="question">6. What is an agent–environment interaction?</div>
+            <div class="answer">It is the continuous cycle where an agent observes its environment through sensors, processes the data, and acts upon the environment using its actuators.</div>
+
+            <div class="question">7. Mention any two applications of Artificial Intelligence.</div>
+            <div class="answer">Healthcare (for diagnosis) and Finance (for fraud detection).</div>
+
+            <div class="question">8. What is a performance measure in the context of intelligent agents?</div>
+            <div class="answer">An objective criterion or metric used to evaluate how successful an agent is at achieving its intended goals or desired outcomes.</div>
+
+            <div class="question">9. Define environment in Artificial Intelligence.</div>
+            <div class="answer">The external world, domain, or condition set in which an agent operates, perceives inputs, and executes its actions.</div>
+
+            <div class="question">10. State any two characteristics of an intelligent agent.</div>
+            <div class="answer">1) They adapt to changing situations in their environment. <br> 2) They evaluate outcomes and adjust behavior over time.</div>
+
+            <div class="question">11. What are sensors in an intelligent agent?</div>
+            <div class="answer">Sensors are the mechanisms or inputs an agent uses to gather data and perceive the state of its environment.</div>
+
+            <div class="question">12. What are actuators in an intelligent agent?</div>
+            <div class="answer">Actuators are the mechanisms or outputs through which an agent carries out its chosen actions to alter or affect its environment.</div>
+
+            <div class="question">13. Mention any two important milestones in the history of AI.</div>
+            <div class="answer">1) The 1956 Dartmouth Conference where the term "Artificial Intelligence" was coined. <br> 2) The development of deep learning models in the 2010s that revolutionized computer vision and natural language processing.</div>
+
+            <div class="question">14. What is meant by autonomy of an agent?</div>
+            <div class="answer">Autonomy is an agent's ability to operate independently, learning and adapting its behavior based on its own experience rather than relying strictly on pre-programmed human knowledge.</div>
+
+            <div class="question">15. Define learning agent.</div>
+            <div class="answer">A learning agent is an AI that gathers experience through interaction, evaluates feedback, and updates its behavior to perform better with each cycle.</div>
+
+            <div class="question">16. What is meant by PEAS? Expand the term.</div>
+            <div class="answer">PEAS is a framework used to define an agent's operational parameters. It stands for <strong>P</strong>erformance measure, <strong>E</strong>nvironment, <strong>A</strong>ctuators, and <strong>S</strong>ensors.</div>
+
+            <div class="question">17. What is a task environment?</div>
+            <div class="answer">The task environment is the specific "problem" an agent is designed to solve, formally defined by the PEAS framework.</div>
+
+            <div class="question">18. Distinguish between an agent and an environment (any two points).</div>
+            <div class="answer">1) The agent acts and makes decisions, whereas the environment is the space that receives those actions. <br> 2) The agent contains decision rules and memory, while the environment generates the inputs and feedback the agent learns from.</div>
+
+            <div class="question">19. What is meant by artificial intelligence as a science?</div>
+            <div class="answer">It is the interdisciplinary scientific study focused on understanding the principles of intelligence and building computational models that replicate cognitive functions like reasoning and problem-solving.</div>
+
+            <div class="question">20. List any two components of an intelligent agent.</div>
+            <div class="answer">Sensors (to gather data) and decision rules/learning methods (to choose the right action).</div>
+        </div>
+
+        <h2>B. Five-Mark Questions (Brief Answer)</h2>
+        <div class="qa-block">
+            <div class="question">1. Explain the concept of Artificial Intelligence with suitable examples.</div>
+            <div class="answer">Artificial Intelligence is the simulation of human intelligence by machines, enabling them to process information, adapt to situations, and make autonomous decisions. Unlike regular programs with fixed instructions, AI evaluates outcomes and adjusts its behavior. For example, a recommendation engine uses AI to analyze your viewing habits and suggest movies, or an autonomous vehicle processes real-time camera data to navigate traffic safely.</div>
+
+            <div class="question">2. Describe the foundations of Artificial Intelligence.</div>
+            <div class="answer">AI is built on several core disciplines:
+                <ul>
+                    <li><strong>Philosophy:</strong> Provides theories on logic, reasoning, and the nature of the mind.</li>
+                    <li><strong>Mathematics:</strong> Supplies the formal rules for logic, probability (to handle uncertainty), and algorithms.</li>
+                    <li><strong>Computer Science:</strong> Provides the hardware and programming frameworks required to build and execute AI models.</li>
+                    <li><strong>Psychology & Neuroscience:</strong> Inspires how machines can mimic human cognitive processes and neural networks.</li>
+                </ul>
+            </div>
+
+            <div class="question">3. Briefly explain the history and evolution of Artificial Intelligence.</div>
+            <div class="answer">AI's history began in the mid-20th century with Alan Turing's theoretical work and the official founding of the field at the 1956 Dartmouth Conference. Early years were marked by high optimism and symbolic logic programming. The field experienced "AI Winters" in the 1970s and 1980s when funding collapsed due to unfulfilled promises. The 1990s brought a shift toward machine learning and statistical methods. In the 2010s, massive datasets and powerful GPUs fueled the deep learning revolution, leading to modern highly capable AI systems.</div>
+
+            <div class="question">4. Explain different types of intelligent agents.</div>
+            <div class="answer">There are five primary types of agents:
+                <ul>
+                    <li><strong>Simple Reflex Agents:</strong> React instantly to current inputs using fixed condition-action rules.</li>
+                    <li><strong>Model-Based Agents:</strong> Maintain an internal state to track unseen aspects of the environment.</li>
+                    <li><strong>Goal-Based Agents:</strong> Evaluate possible steps and compare choices to achieve long-term goals.</li>
+                    <li><strong>Utility-Based Agents:</strong> Assign utility scores to outcomes to choose the most beneficial result.</li>
+                    <li><strong>Learning Agents:</strong> Gather experience, evaluate feedback, and improve performance over time.</li>
+                </ul>
+            </div>
+
+            <div class="question">5. Describe the structure of an intelligent agent with a neat diagram.</div>
+            <div class="answer">The structure of an intelligent agent is fundamentally divided into its architecture (the computing device) and the agent program (the algorithm). The agent perceives the state of the environment through its sensors. This percept is passed to the agent program, which uses reasoning, internal models, or learning mechanisms to decide on the best action. The chosen action is then executed back onto the environment via actuators.<br>
+            <span class="note">[Note: An architecture diagram showing Environment -> Sensors -> Agent Function -> Actuators -> Environment should be drawn here.]</span></div>
+
+            <div class="question">6. Explain the functions of an intelligent agent.</div>
+            <div class="answer">The core functions of an intelligent agent are:
+                <ul>
+                    <li><strong>Perception:</strong> Using sensors to gather dynamic data from the surroundings.</li>
+                    <li><strong>Decision-Making:</strong> Applying decision rules, probability algorithms, or utility evaluations to determine the best course of action.</li>
+                    <li><strong>Execution:</strong> Carrying out the selected action via actuators to change the environment.</li>
+                    <li><strong>Learning:</strong> Adapting to new data, evaluating past outcomes, and updating behavior to handle evolving patterns.</li>
+                </ul>
+            </div>
+
+            <div class="question">7. Discuss the role of environment in agent-based systems.</div>
+            <div class="answer">The environment defines the complexity of the agent required. For a predictable, fully observable environment, a fast simple reflex agent is enough. However, if the environment is dynamic, partially unobservable, or noisy, the agent must rely on internal models and memory to track context. The environment's constraints dictate whether an agent needs to plan goals, weigh utility, or actively learn to succeed.</div>
+
+            <div class="question">8. Explain PEAS with an example.</div>
+            <div class="answer">PEAS defines the task environment for an AI system. For an <strong>Automated Taxi</strong>:
+                <ul>
+                    <li><strong>P (Performance Measure):</strong> Reaching the destination safely, minimizing time, following traffic laws, passenger comfort.</li>
+                    <li><strong>E (Environment):</strong> Roads, other vehicles, pedestrians, traffic lights, weather conditions.</li>
+                    <li><strong>A (Actuators):</strong> Steering wheel, accelerator, brakes, indicators, horn.</li>
+                    <li><strong>S (Sensors):</strong> Cameras, Lidar, GPS, speedometer, engine sensors.</li>
+                </ul>
+            </div>
+
+            <div class="question">9. Describe various applications of Artificial Intelligence in real life.</div>
+            <div class="answer">AI spans numerous industries based on task complexity. In <strong>healthcare</strong>, AI agents assist with patient diagnosis. In <strong>finance</strong>, they are utilized for fraud detection and risk assessment. Everyday digital life relies heavily on learning agents for <strong>e-commerce recommendation engines</strong> and personalized digital assistants. Furthermore, AI powers <strong>transportation</strong> through autonomous vehicles and navigation optimization.</div>
+
+            <div class="question">10. Explain the concept of rationality in intelligent agents.</div>
+            <div class="answer">Rationality is the property of an agent choosing the action that maximizes its expected performance measure, given its current percept sequence and the knowledge it holds. It does not mean the agent is omniscient (knowing the absolute future) or perfect; rather, it means the agent processes available information logically to make the most optimal choice possible at that exact moment.</div>
+        </div>
+
+        <h2>C. Ten-Mark Questions (Essay Type)</h2>
+        <div class="qa-block">
+            <div class="question">1. Define Artificial Intelligence. Explain its foundations and applications in detail.</div>
+            <div class="answer">
+                <strong>Definition:</strong> An AI agent is a system that observes its environment, processes inputs, and takes actions to achieve a specific goal. In contrast to regular software programs that follow fixed instructions, AI systems adapt to situations, respond to environmental changes, evaluate outcomes, and adjust their behavior over time.<br><br>
+                <strong>Foundations:</strong> AI is built upon multidisciplinary foundations including Philosophy (logic, reasoning, mind), Mathematics (probability, optimization, algorithms), Computer Science (hardware, programming), and Psychology/Neuroscience (cognitive models, neural networks).<br><br>
+                <strong>Applications:</strong> 
+                <ul>
+                    <li><strong>Healthcare:</strong> AI agents are actively used for medical diagnosis and patient data analysis.</li>
+                    <li><strong>Finance:</strong> Systems utilize AI for high-frequency trading and fraud detection.</li>
+                    <li><strong>Transportation:</strong> Learning agents form the core of autonomous vehicles, and multi-agent systems manage traffic networks.</li>
+                    <li><strong>E-commerce & Personalization:</strong> AI drives recommendation engines and personalized digital assistants.</li>
+                    <li><strong>Manufacturing:</strong> Agents are deployed for automation, adaptive robotics, and coordinating logistics tasks.</li>
+                </ul>
+            </div>
+
+            <div class="question">2. Trace the history of Artificial Intelligence and discuss its major developments.</div>
+            <div class="answer">
+                The history of AI can be traced back to the mid-20th century. It officially began as a field at the 1956 Dartmouth Conference, organized by John McCarthy, where the term "Artificial Intelligence" was coined. 
+                <br><br>
+                <strong>Major Developments:</strong>
+                <ul>
+                    <li><strong>Early Enthusiasm (1950s-1960s):</strong> Development of symbolic logic and early programs like the General Problem Solver (GPS) and ELIZA, an early natural language processing program.</li>
+                    <li><strong>AI Winters (1970s & late 1980s):</strong> Periods of reduced funding and interest due to computational limitations and the realization that early AI models could not easily scale to real-world complexity.</li>
+                    <li><strong>Expert Systems (1980s):</strong> The rise of systems programmed with rules from human experts, finding commercial success in specific corporate domains.</li>
+                    <li><strong>Machine Learning Era (1990s-2000s):</strong> A shift from symbolic logic to statistical approaches, driven by increases in computational power and data.</li>
+                    <li><strong>Deep Learning Revolution (2010s-Present):</strong> The explosion of neural networks, powered by GPUs and massive datasets, leading to breakthroughs in computer vision, autonomous driving, and large language models.</li>
+                </ul>
+            </div>
+
+            <div class="question">3. Explain intelligent agents in detail. Discuss their structure and functions.</div>
+            <div class="answer">
+                <strong>Functions:</strong> The primary function of an AI agent is to observe its environment, process inputs, and take action to achieve a goal. Rather than strictly following fixed instructions, they evaluate outcomes, respond to changes, and adapt their behavior, which makes them highly useful for automation and real-time decision-making. Agents can also operate in multi-agent systems where they must cooperate, compete, share information, or divide responsibilities.<br><br>
+                <strong>Structure:</strong> 
+                <ul>
+                    <li><strong>Sensors:</strong> Agents use sensors to gather data from the environment.</li>
+                    <li><strong>Decision Mechanisms (Agent Program):</strong> They utilize decision rules or learning methods to choose the right action for every step. They may also use internal models, probability estimates, or utility evaluations to handle uncertainty.</li>
+                    <li><strong>Memory:</strong> Agents can possess memory to track past states, handle partial information, and understand context, which improves performance in dynamic conditions.</li>
+                    <li><strong>Actuators:</strong> The hardware or software mechanisms used to implement the decision and alter the environment.</li>
+                </ul>
+            </div>
+
+            <div class="question">4. Discuss various types of intelligent agents with suitable examples.</div>
+            <div class="answer">
+                The foundational types of AI agents vary in memory use, adaptability, and decision-making abilities:
+                <ul>
+                    <li><strong>Simple Reflex Agents:</strong> React exclusively to current inputs following predefined condition-action rules and do not store past information. <em>Example: Thermostats and automatic doors, which operate in fully observable and predictable environments.</em></li>
+                    <li><strong>Model-Based Agents:</strong> Maintain an internal state to track unseen portions of their environment, combining current perceptions with stored information. <em>Example: Adaptive control systems and robotics that must consider past states before acting.</em></li>
+                    <li><strong>Goal-Based Agents:</strong> Evaluate possible steps and compare choices to select the path that moves them closer to a long-term outcome. <em>Example: Navigation and complex problem-solving systems that require search and planning techniques.</em></li>
+                    <li><strong>Utility-Based Agents:</strong> Assign utility scores to potential results and select the action that yields the highest benefit. <em>Example: Systems operating in uncertain environments that must balance multiple valid choices, such as trading off speed versus safety.</em></li>
+                    <li><strong>Learning Agents:</strong> Gather experience through interaction, evaluate feedback, and update their behavior to perform better over time. <em>Example: Autonomous vehicles and recommendation engines where patterns evolve and rules cannot be pre-programmed.</em></li>
+                </ul>
+            </div>
+
+            <div class="question">5. Explain agent–environment interaction. Classify different types of environments.</div>
+            <div class="answer">
+                <strong>Interaction:</strong> Agents continuously interact with their environment by using sensors to gather data and applying decision rules to execute actions via actuators. They adapt to the environment by evaluating outcomes and adjusting behavior. <br><br>
+                <strong>Environment Classification:</strong> Environments heavily dictate agent design and can be classified as:
+                <ul>
+                    <li><strong>Fully Observable vs. Partially Observable:</strong> Fully observable environments give the agent access to the complete state of the environment at all times (suitable for simple reflex agents). Partially observable environments (noisy or incomplete data) require model-based agents with memory.</li>
+                    <li><strong>Deterministic vs. Stochastic:</strong> Deterministic means the next state is completely determined by the current state and the agent's action. Stochastic environments involve uncertainty and randomness.</li>
+                    <li><strong>Static vs. Dynamic:</strong> Static environments don't change while the agent is deliberating. Dynamic environments have evolving patterns and require fast decision-making or learning capabilities.</li>
+                    <li><strong>Discrete vs. Continuous:</strong> Discrete environments have distinct, clearly defined states and actions (like chess). Continuous environments change fluidly (like driving a car).</li>
+                </ul>
+            </div>
+
+            <div class="question">6. Describe applications of Artificial Intelligence in healthcare, education, and industry.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Healthcare:</strong> AI agents are utilized for accurate medical diagnosis, medical image analysis (like X-rays and MRIs), robotic surgeries, and personalized medicine planning.</li>
+                    <li><strong>Industry (Manufacturing & Finance):</strong> In manufacturing, AI is used for automation, predictive maintenance of machines, and adaptive robotics. The finance industry uses agents for fraud detection, algorithmic trading, and credit scoring. Logistics relies heavily on multi-agent systems for supply chain optimization.</li>
+                    <li><strong>Education:</strong> AI is used for personalized learning systems that adapt to a student's pace, automated grading of assignments, intelligent tutoring systems, and identifying students who may need additional academic support.</li>
+                </ul>
+            </div>
+
+            <div class="question">7. Explain the concept of rational agents and performance measures with examples.</div>
+            <div class="answer">
+                <strong>Concept:</strong> A rational agent is a system that chooses the action that maximizes its expected performance measure, given its current percept sequence and prior knowledge. Rationality is about optimal decision-making, not perfection or omniscience. It involves evaluating outcomes and taking actions logically to achieve a goal.<br><br>
+                <strong>Performance Measures & Utility:</strong> A performance measure is the criteria used to evaluate the agent's success. To maximize this rationally, utility-based agents compute which outcome brings the highest benefit by assigning values to potential results. This allows the agent to navigate uncertain environments by balancing competing performance measures.<br><br>
+                <strong>Example:</strong> Consider an autonomous taxi. Its performance measures include safety, speed, passenger comfort, and obeying traffic laws. If the taxi faces multiple valid choices (e.g., a fast but bumpy road vs. a slower but smooth road), evaluating utility scores helps it make the most beneficial, rational decision depending on the weighted priority of those performance measures.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODULE 2 CONTENT -->
+    <div id="module2" class="tab-content">
+        <h2>A. 2 Mark Questions (Very Short Answer)</h2>
+        <div class="qa-block">
+            <div class="question">1. What is Knowledge Representation (KR)?</div>
+            <div class="answer">KR is the method of formulating knowledge about the real world in a structured form so that a computer system can utilize it to solve complex tasks.</div>
+
+            <div class="question">2. Define a Knowledge-Based Agent.</div>
+            <div class="answer">A Knowledge-Based Agent is an intelligent agent that maintains an internal state of knowledge (a Knowledge Base) and uses reasoning mechanisms to decide what actions to take.</div>
+
+            <div class="question">3. What is a Knowledge Base?</div>
+            <div class="answer">A Knowledge Base (KB) is a centralized repository of facts, rules, and relationships used by an AI system to reason and make decisions.</div>
+
+            <div class="question">4. State any two components of a Knowledge-Based System.</div>
+            <div class="answer">1) The Knowledge Base (KB) <br> 2) The Inference Engine.</div>
+
+            <div class="question">5. What is declarative knowledge?</div>
+            <div class="answer">Declarative knowledge consists of factual information about the domain (knowing "what" is true), such as facts and rules.</div>
+
+            <div class="question">6. Define procedural knowledge.</div>
+            <div class="answer">Procedural knowledge is information on how to perform a task (knowing "how"), often represented as a sequence of steps, rules, or instructions.</div>
+
+            <div class="question">7. What is a Frame in AI?</div>
+            <div class="answer">A frame is an object-oriented data structure used to divide knowledge into substructures by representing stereotyped situations, entities, or concepts.</div>
+
+            <div class="question">8. What is meant by a slot in frame structures?</div>
+            <div class="answer">A slot is an attribute or property within a frame. For example, a "Car" frame might have a "Color" slot.</div>
+
+            <div class="question">9. Define Propositional Logic.</div>
+            <div class="answer">Propositional Logic is a branch of logic that deals with propositions (statements that are objectively true or false) and their combinations using logical connectives.</div>
+
+            <div class="question">10. What is a proposition?</div>
+            <div class="answer">A proposition is a declarative statement that has a definitive truth value—it must be either strictly True or False, but not both.</div>
+
+            <div class="question">11. Name any two logical connectives.</div>
+            <div class="answer">1) AND (Conjunction, $\land$) <br> 2) OR (Disjunction, $\lor$).</div>
+
+            <div class="question">12. What is First Order Logic (FOL)?</div>
+            <div class="answer">FOL is an expressive logical system extending propositional logic by incorporating objects, predicates (relations), variables, and quantifiers.</div>
+
+            <div class="question">13. What is a predicate?</div>
+            <div class="answer">A predicate represents a property of an object or a relationship between multiple objects, evaluating to true or false (e.g., Brother(John, Mary)).</div>
+
+            <div class="question">14. Define quantifiers in FOL.</div>
+            <div class="answer">Quantifiers are logical symbols used to specify the scope of truth for a formula over a specific domain of variables.</div>
+
+            <div class="question">15. What is universal quantifier ($\forall$)?</div>
+            <div class="answer">The universal quantifier implies that a statement holds True for <strong>all</strong> elements within a particular domain.</div>
+
+            <div class="question">16. What is existential quantifier ($\exists$)?</div>
+            <div class="answer">The existential quantifier implies that there exists <strong>at least one</strong> element in the domain for which the statement holds True.</div>
+
+            <div class="question">17. What is inference in AI?</div>
+            <div class="answer">Inference is the cognitive or computational process of deriving new knowledge or logical conclusions from existing facts and premises.</div>
+
+            <div class="question">18. What is an inference rule?</div>
+            <div class="answer">An inference rule is a standard, logically sound template used to deduce a conclusion from a given set of premises (e.g., Modus Ponens).</div>
+
+            <div class="question">19. Define reasoning.</div>
+            <div class="answer">Reasoning is the mental process of drawing logical inferences or conclusions based on existing knowledge, facts, and beliefs.</div>
+
+            <div class="question">20. Mention any two types of reasoning.</div>
+            <div class="answer">1) Deductive Reasoning <br> 2) Inductive Reasoning.</div>
+        </div>
+
+        <h2>B. 5 Mark Questions (Short Answer / Explanation)</h2>
+        <div class="qa-block">
+            <div class="question">1. Explain Knowledge Representation and its importance in AI.</div>
+            <div class="answer">Knowledge Representation (KR) is the field of AI focused on designing formal languages to encode information about the world so that an AI system can utilize it. <strong>Importance:</strong> It forms the backbone of an agent's intelligence. Without proper KR, an agent cannot perform reasoning, learning, or planning. Good KR makes implicit knowledge explicit, reduces computational complexity, and allows the Inference Engine to efficiently deduce solutions.</div>
+
+            <div class="question">2. Describe the architecture of a Knowledge-Based Agent with a neat diagram.</div>
+            <div class="answer">A Knowledge-Based Agent operates through two main components: a Knowledge Base (KB) and an Inference Engine. It interacts with the environment by receiving Percepts (inputs) and emitting Actions (outputs).<br>
+            <span class="note">[Diagram Structure: Environment &rarr; Sensors &rarr; Agent (containing Inference Engine processing queries/updates to the Knowledge Base) &rarr; Actuators &rarr; Environment]</span></div>
+
+            <div class="question">3. Explain the working of a Knowledge-Based System.</div>
+            <div class="answer">A Knowledge-Based System works through a cycle of three primary operations: 
+                <ul>
+                    <li><strong>TELL:</strong> The system is fed new knowledge or percepts from the environment, updating the Knowledge Base.</li>
+                    <li><strong>ASK:</strong> The agent queries the Knowledge Base to figure out what action it should take based on its current logic.</li>
+                    <li><strong>PERFORM:</strong> The agent executes the logically deduced action in the environment.</li>
+                </ul>
+            </div>
+
+            <div class="question">4. Discuss different types of knowledge with examples.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Declarative Knowledge:</strong> Knowing facts. Example: "The capital of France is Paris."</li>
+                    <li><strong>Procedural Knowledge:</strong> Knowing how to do something. Example: The sequence of steps to bake a cake.</li>
+                    <li><strong>Heuristic Knowledge:</strong> Rules of thumb derived from expert experience. Example: "If the computer won't turn on, check the power cable first."</li>
+                    <li><strong>Meta-knowledge:</strong> Knowledge about knowledge. Example: Knowing which algorithm to use to search a database efficiently.</li>
+                </ul>
+            </div>
+
+            <div class="question">5. Explain Frame Structures with an example.</div>
+            <div class="answer">A frame is a data structure designed to represent a stereotyped concept or situation. It consists of a collection of attributes called <strong>Slots</strong>, which hold <strong>Fillers</strong> (values). <br>
+            <strong>Example:</strong> A frame for the concept "Bird".<br>
+            - Slot 1: <em>Locomotion</em> | Value: <em>Fly</em><br>
+            - Slot 2: <em>Reproduction</em> | Value: <em>Eggs</em><br>
+            - Slot 3: <em>Is-A</em> | Value: <em>Animal</em> (Inheritance)</div>
+
+            <div class="question">6. Compare Propositional Logic and First Order Logic.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Propositional Logic:</strong> Deals with simple, indivisible sentences that are entirely true or false. It uses simple variables (P, Q) and lacks the expressiveness to talk about objects and their properties generally.</li>
+                    <li><strong>First Order Logic (FOL):</strong> Highly expressive. It breaks down propositions into Objects (John, Tree), Relations/Predicates (IsBrotherOf), and allows for Quantifiers ($\forall, \exists$) to make sweeping logical statements across domains.</li>
+                </ul>
+            </div>
+
+            <div class="question">7. Explain syntax and semantics of Propositional Logic.</div>
+            <div class="answer"><strong>Syntax:</strong> Defines the valid structure of sentences. It includes atomic propositions (A, B) and logical connectives like NOT ($\neg$), AND ($\land$), OR ($\lor$), IMPLIES ($\Rightarrow$), and IFF ($\Leftrightarrow$). Valid sentences must be formed using these symbols properly.<br>
+            <strong>Semantics:</strong> Defines the meaning or truth value of sentences. Semantics are typically represented using truth tables, which compute the exact truth value of complex propositions based on the truth values of their atomic parts.</div>
+
+            <div class="question">8. Describe predicates, constants, and variables in FOL.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Constants:</strong> Specific, named objects in the domain (e.g., <em>John</em>, <em>Earth</em>, <em>Number 5</em>).</li>
+                    <li><strong>Variables:</strong> Placeholders that can represent any object in the domain (e.g., <em>x</em>, <em>y</em>).</li>
+                    <li><strong>Predicates:</strong> Relations or properties that evaluate to True or False when applied to terms. Example: <em>Likes(x, Mary)</em>.</li>
+                </ul>
+            </div>
+
+            <div class="question">9. Explain quantifiers in First Order Logic with examples.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Universal Quantifier ($\forall$):</strong> Asserts that a condition is true for everything. Example: $\forall x (King(x) \Rightarrow Person(x))$ translates to "All kings are persons."</li>
+                    <li><strong>Existential Quantifier ($\exists$):</strong> Asserts that a condition is true for at least one thing. Example: $\exists x (King(x) \land Greedy(x))$ translates to "There exists some king who is greedy."</li>
+                </ul>
+            </div>
+
+            <div class="question">10. What is Inference in FOL? Explain any two inference rules.</div>
+            <div class="answer">Inference in FOL is the formal process of deriving new logical sentences from a given set of axioms in the Knowledge Base. 
+                <ul>
+                    <li><strong>Modus Ponens:</strong> If $P \Rightarrow Q$ is true, and $P$ is true, then $Q$ is true.</li>
+                    <li><strong>Modus Tollens:</strong> If $P \Rightarrow Q$ is true, and $\neg Q$ (not Q) is true, then $\neg P$ must be true.</li>
+                </ul>
+            </div>
+
+            <div class="question">11. Explain forward chaining and backward chaining.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Forward Chaining:</strong> A data-driven approach. It starts with known facts and applies inference rules to extract new data until a desired goal or conclusion is reached.</li>
+                    <li><strong>Backward Chaining:</strong> A goal-driven approach. It starts with the target goal and works backward, looking for the facts and rules in the knowledge base that support or prove that goal.</li>
+                </ul>
+            </div>
+
+            <div class="question">12. Describe deductive reasoning with an example.</div>
+            <div class="answer">Deductive reasoning is a "top-down" logical process that draws specific conclusions from general rules or premises. If the premises are true, the conclusion is guaranteed to be true.<br>
+            <strong>Example:</strong> <br>
+            Premise 1: All humans are mortal. <br>
+            Premise 2: Socrates is a human. <br>
+            Conclusion: Therefore, Socrates is mortal.</div>
+
+            <div class="question">13. Explain inductive reasoning and its limitations.</div>
+            <div class="answer">Inductive reasoning is a "bottom-up" approach where specific observations are used to formulate a general rule or theory. <br>
+            <strong>Limitations:</strong> Unlike deduction, inductive conclusions are only probable, not guaranteed. Observing 100 white swans leads to the inductive conclusion "All swans are white," but finding a single black swan proves the conclusion false.</div>
+
+            <div class="question">14. Discuss abductive reasoning with an example.</div>
+            <div class="answer">Abductive reasoning is "inference to the best explanation." It starts with an observation and seeks the most likely and simplest explanation for it.<br>
+            <strong>Example:</strong> <br>
+            Observation: The grass outside is wet. <br>
+            Known Rule: If it rains, the grass gets wet. <br>
+            Conclusion: It probably rained. (Though a sprinkler could also be the cause, rain is inferred as the most likely explanation).</div>
+
+            <div class="question">15. Explain the role of reasoning in intelligent systems.</div>
+            <div class="answer">Reasoning allows intelligent systems to move beyond simple reflex actions. It enables them to logically connect facts, deduce unseen truths, solve complex problems, and plan for the future. Without reasoning, AI systems could not handle incomplete information, adapt to new logic puzzles, or provide explanations for their decisions.</div>
+        </div>
+
+        <h2>C. 10 Mark Questions (Long Answer / Essay Type)</h2>
+        <div class="qa-block">
+            <div class="question">1. Explain Knowledge Representation in detail. Discuss its goals, issues, and methods.</div>
+            <div class="answer">
+                <strong>Knowledge Representation (KR)</strong> is the process of defining the world in a structured format so that a computer can perform cognitive tasks like reasoning and problem-solving. <br><br>
+                <strong>Goals of KR:</strong>
+                <ul>
+                    <li><strong>Expressiveness:</strong> The language should be rich enough to represent complex real-world concepts.</li>
+                    <li><strong>Inferential Adequacy:</strong> The system should be able to manipulate representations to derive new knowledge.</li>
+                    <li><strong>Acquisition Efficiency:</strong> It should be easy to inject new information into the system.</li>
+                </ul>
+                <strong>Issues in KR:</strong>
+                <ul>
+                    <li>Representing exceptions to rules (e.g., "Birds fly, but penguins don't").</li>
+                    <li>Handling ambiguity and uncertainty.</li>
+                    <li>Balancing the trade-off between how expressive the logic is and how computationally complex it becomes to solve.</li>
+                </ul>
+                <strong>Methods:</strong> Common methods include Formal Logic (Propositional and First Order), Semantic Networks (graph-based relations), Frames (object-based attribute lists), and Production Rules (If-Then statements).
+            </div>
+
+            <div class="question">2. Describe Knowledge-Based Agents in detail with their structure and working.</div>
+            <div class="answer">
+                A <strong>Knowledge-Based Agent</strong> is distinct because it relies on an explicit internal representation of knowledge rather than just hard-coded reactions. <br><br>
+                <strong>Structure:</strong> It consists of two massive pillars: The <strong>Knowledge Base (KB)</strong>, which is a set of sentences or rules expressed in a formal language, and the <strong>Inference Engine</strong>, which is the algorithm that manipulates those sentences to deduce new truths.<br><br>
+                <strong>Working:</strong> When the agent perceives an environment, it translates that percept into a logical statement and adds it to the KB (using a <strong>TELL</strong> command). It then queries the KB (using an <strong>ASK</strong> command) to decide what action is logically optimal given the current state and its historical rules. Finally, it executes the action and updates its KB to remember what it did. This allows the agent to act rationally even in unseen, complex scenarios.
+            </div>
+
+            <div class="question">3. Explain the architecture and functioning of a Knowledge-Based System with examples.</div>
+            <div class="answer">
+                A <strong>Knowledge-Based System (KBS)</strong> is a broader software architecture (like an Expert System) that applies reasoning. <br><br>
+                <strong>Architecture Components:</strong>
+                <ul>
+                    <li><strong>User Interface:</strong> How the human user communicates with the system.</li>
+                    <li><strong>Knowledge Base (KB):</strong> The domain-specific database of rules and facts.</li>
+                    <li><strong>Inference Engine:</strong> The processor that applies logical rules to the KB to deduce answers.</li>
+                    <li><strong>Knowledge Acquisition Facility:</strong> A module that allows experts to easily add or modify rules without coding.</li>
+                </ul>
+                <strong>Functioning Example:</strong> In a medical diagnosis KBS, a doctor inputs symptoms via the User Interface. The Inference Engine takes these symptoms, compares them against the massive library of medical rules in the KB (e.g., "IF Fever AND Cough THEN suspect Flu"), and outputs a diagnosis back to the doctor.
+            </div>
+
+            <div class="question">4. Discuss Frame Structures in detail. Explain slots, fillers, inheritance, and advantages.</div>
+            <div class="answer">
+                <strong>Frame Structures</strong> were proposed by Marvin Minsky as a way to group related knowledge. A frame represents an entity or situation.<br><br>
+                <strong>Slots and Fillers:</strong> A frame is made up of slots (properties) and fillers (the values of those properties). For example, a "Professor" frame might have a slot named "Department" with the filler "Computer Science".<br><br>
+                <strong>Inheritance:</strong> Frames use an "IS-A" hierarchy. If we create a frame for "Dog", it can have an IS-A slot pointing to the "Mammal" frame. The Dog frame automatically inherits all slots from the Mammal frame (like "Has_Blood: Warm"), drastically reducing data redundancy.<br><br>
+                <strong>Advantages:</strong> Frames mimic how humans chunk information. They naturally support default values (e.g., a "Car" frame defaults to 4 wheels unless told otherwise), simplify the addition of new objects via inheritance, and organize knowledge neatly for object-oriented programming.
+            </div>
+
+            <div class="question">5. Explain Propositional Logic in detail, including syntax, semantics, and inference.</div>
+            <div class="answer">
+                <strong>Propositional Logic (PL)</strong> is the simplest logic representing facts that are either True or False.<br><br>
+                <strong>Syntax:</strong> PL defines atomic sentences using proposition symbols (e.g., P, Q). Complex sentences are built using logical connectives: $\neg$ (NOT), $\land$ (AND), $\lor$ (OR), $\Rightarrow$ (IMPLIES), and $\Leftrightarrow$ (BICONDITIONAL). Example syntax: $(P \land Q) \Rightarrow R$.<br><br>
+                <strong>Semantics:</strong> Determines the exact truth of a sentence relative to a model. A truth table defines the semantics for connectives. For instance, $P \land Q$ is semantically True only if both P and Q are True in the real world.<br><br>
+                <strong>Inference:</strong> The process of proving a proposition. It can be done using model-checking (generating full truth tables) or applying standard inference rules like Modus Ponens to legally rewrite statements until the target conclusion is mathematically reached.
+            </div>
+
+            <div class="question">6. Describe First Order Logic in detail with predicates, quantifiers, and examples.</div>
+            <div class="answer">
+                <strong>First Order Logic (FOL)</strong> solves the expressiveness limits of Propositional Logic by looking inside the sentence to define objects and relations.<br><br>
+                <strong>Components:</strong>
+                <ul>
+                    <li><strong>Objects/Constants:</strong> Specific things (e.g., Alice, Bob).</li>
+                    <li><strong>Variables:</strong> Symbols mapping to any object (e.g., x, y).</li>
+                    <li><strong>Predicates:</strong> Relations that return True/False (e.g., <em>Parent(x, y)</em>).</li>
+                </ul>
+                <strong>Quantifiers:</strong>
+                <ul>
+                    <li><strong>Universal ($\forall$):</strong> "For all". Example: $\forall x (Human(x) \Rightarrow Mortal(x))$ means every human is mortal.</li>
+                    <li><strong>Existential ($\exists$):</strong> "There exists". Example: $\exists x (Student(x) \land Smart(x))$ means there is at least one smart student.</li>
+                </ul>
+                FOL is critical because it allows AI to make broad rules about domains without having to write millions of individual true/false propositions.
+            </div>
+
+            <div class="question">7. Explain Inference in First Order Logic, including unification and resolution.</div>
+            <div class="answer">
+                Inference in FOL requires manipulating sentences containing variables, which makes it complex.<br><br>
+                <strong>Unification:</strong> This is a core algorithm used to make two different logical expressions look identical by finding suitable substitutions for their variables. If an AI knows <em>Knows(John, x)</em> and receives a query <em>Knows(y, Mary)</em>, unification substitutes $x=Mary$ and $y=John$ so the inference engine can process them as a match.<br><br>
+                <strong>Resolution:</strong> A powerful rule of inference that relies on proof by contradiction. To prove a statement $P$, the AI assumes $\neg P$ (Not P) is true, converts the entire Knowledge Base to a standardized format called Conjunctive Normal Form (CNF), and attempts to resolve clauses until it produces an empty clause (a contradiction). If a contradiction is found, the original assumption ($\neg P$) was wrong, thus proving $P$ is true.
+            </div>
+
+            <div class="question">8. What is Reasoning in AI? Explain various types of reasoning with suitable examples.</div>
+            <div class="answer">
+                <strong>Reasoning</strong> is the process an AI uses to draw conclusions, make predictions, or construct explanations from existing knowledge.<br><br>
+                <strong>Types of Reasoning:</strong>
+                <ul>
+                    <li><strong>Deductive Reasoning:</strong> Guarantees the truth of the conclusion. (Rule: All cars have wheels. Fact: This is a car. Conclusion: It has wheels.)</li>
+                    <li><strong>Inductive Reasoning:</strong> Draws general conclusions from specific samples. (Observation: The first 5 taxis I saw were yellow. Conclusion: All taxis are yellow. *Not guaranteed to be true*).</li>
+                    <li><strong>Abductive Reasoning:</strong> Finding the most plausible explanation for an observation. (Fact: The ground is wet. Conclusion: It probably rained.)</li>
+                    <li><strong>Monotonic Reasoning:</strong> Once a fact is proven, it cannot be unproven by adding new facts. Traditional logic works this way.</li>
+                    <li><strong>Non-Monotonic Reasoning:</strong> Conclusions can be invalidated by new facts. (Fact: Birds fly. Fact: Tweety is a bird. Conclusion: Tweety flies. *New Fact*: Tweety is a penguin. *Updated Conclusion*: Tweety cannot fly.)</li>
+                </ul>
+            </div>
+
+            <div class="question">9. Compare deductive, inductive, and abductive reasoning in detail.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Deductive Reasoning:</strong> Moves from <em>General &rarr; Specific</em>. It uses established rules to prove a specific case. The conclusion is 100% logically certain if the premises are true. It is heavily used in mathematical proofs and rule-based expert systems.</li>
+                    <li><strong>Inductive Reasoning:</strong> Moves from <em>Specific &rarr; General</em>. It uses specific data points to formulate a broad rule. The conclusion is probabilistic, not guaranteed. It is the foundational reasoning behind Machine Learning and data mining, where algorithms detect patterns in large datasets.</li>
+                    <li><strong>Abductive Reasoning:</strong> Moves from <em>Observation &rarr; Cause (Explanation)</em>. It uses incomplete information to infer the most likely underlying cause. It doesn't guarantee accuracy but is highly practical for everyday decision-making, medical diagnosis (inferring disease from symptoms), and troubleshooting.</li>
+                </ul>
+            </div>
+
+            <div class="question">10. Discuss the importance of logic and reasoning in building intelligent agents and systems.</div>
+            <div class="answer">
+                Logic and reasoning are the bedrock of what makes an agent "intelligent" rather than just a programmed machine.<br><br>
+                <strong>1. Handling Complexity:</strong> Without logic, developers would have to hard-code an action for every conceivable scenario in the universe. Logic allows agents to store general rules and figure out the specific answers on the fly.<br>
+                <strong>2. Proving Safety:</strong> In critical domains like autonomous driving or medical AI, formal logic allows engineers to mathematically verify that the system's reasoning processes will not yield dangerous conclusions.<br>
+                <strong>3. Explainability:</strong> Reasoning engines can trace their steps backward. If an expert system diagnoses a patient with cancer, it can use its reasoning chain to explain exactly <em>why</em> it made that decision to the doctor.<br>
+                <strong>4. Planning:</strong> Logic enables agents to look into the future, reasoning about the consequences of their actions before they take them, which is essential for problem-solving robots.
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        function openTab(tabId, element) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected tab content and activate the button
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
