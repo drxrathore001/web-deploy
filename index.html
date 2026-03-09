@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Artificial Intelligence - Premium Study Guide</title>
+    <title>AI and Software Testing - Study Guide</title>
     
     <!-- Import Modern Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,14 +168,15 @@
 </head>
 <body>
 
-    <h1>Artificial Intelligence</h1>
+    <h1>AI and Software Testing</h1>
     <div class="subtitle">Complete Study Guide & Question Bank</div>
 
     <!-- Premium Tab Navigation -->
     <div class="tab-wrapper">
         <div class="tab-container">
-            <button class="tab-button active" onclick="openTab('module1', this)">Module 1: Intro & Agents</button>
-            <button class="tab-button" onclick="openTab('module2', this)">Module 2: Logic & Reasoning</button>
+            <button class="tab-button active" onclick="openTab('module1', this)">AI: Intro & Agents</button>
+            <button class="tab-button" onclick="openTab('module2', this)">AI: Logic & Reasoning</button>
+            <button class="tab-button" onclick="openTab('st-module', this)">Software Testing</button>
         </div>
     </div>
 
@@ -1010,6 +1011,341 @@
                 <strong>4. Planning:</strong> Logic enables agents to look into the future, reasoning about the consequences of their actions before they take them, which is essential for problem-solving robots.
             </div>
         </div>
+    </div>
+
+    <!-- SOFTWARE TESTING MODULE -->
+    <div id="st-module" class="tab-content">
+        <h2>Software Testing - Question Bank</h2>
+        
+        <div class="qa-card">
+            <div class="question">1. What is Software Testing? (Also answers Q6)</div>
+            <div class="answer">Software testing is the process of evaluating and verifying that a software product or application does what it is supposed to do. The benefits of testing include preventing bugs, reducing development costs, and improving performance.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">2. Define Software Quality Assurance (SQA).</div>
+            <div class="answer">Software Quality Assurance (SQA) is a proactive, process-oriented practice that ensures the software development processes, methodologies, and standards are correctly defined and followed to guarantee the final product meets specified quality standards.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">3. When is Decision table testing used?</div>
+            <div class="answer">Decision table testing is used when a system's behavior depends on a complex set of logical combinations (multiple conditions). It is a black-box testing technique used to capture complex business rules and ensure all possible combinations of inputs are tested.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">4. What are the benefits of designing tests early in the life cycle? (Also answers Q13)</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Cost Reduction:</strong> Finding and fixing defects during the requirement or design phase is significantly cheaper than fixing them after development.</li>
+                    <li><strong>Clarity:</strong> It helps identify ambiguities, contradictions, or missing details in the requirements early on.</li>
+                    <li><strong>Time Saving:</strong> Test execution can begin immediately once the code is ready.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">5. Define Software faults.</div>
+            <div class="answer">A software fault (commonly known as a bug or defect) is a flaw, mistake, or incorrect step in a computer program that causes it to produce an incorrect or unanticipated result or to behave in unintended ways.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">7. Define RTM.</div>
+            <div class="answer">RTM stands for <strong>Requirements Traceability Matrix</strong>. It is a document that maps and traces user requirements with corresponding test cases to ensure that all requirements defined for a system are tested and verified (achieving 100% test coverage).</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">8. What is Unit Testing?</div>
+            <div class="answer">Unit testing is the first level of software testing where individual units or components of a software are tested in isolation. The purpose is to validate that each unit of the software performs exactly as designed. It is usually performed by the developers.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">9. What is Boundary Value Analysis?</div>
+            <div class="answer">Boundary Value Analysis (BVA) is a black-box testing technique based on testing the extreme ends or boundaries between partitions of input values. Errors are most frequently found at the boundaries rather than the center of an input domain. Test values include the minimum, minimum-1, maximum, maximum+1, and typical values.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">10. Define Test Case.</div>
+            <div class="answer">A test case is a specific set of conditions, variables, or inputs under which a tester evaluates whether a system or a specific software feature works correctly and satisfies its requirements. It includes preconditions, inputs, expected results, and post-conditions.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">11. Discuss the Waterfall Model.</div>
+            <div class="answer">The Waterfall Model is a traditional, linear-sequential software development life cycle (SDLC) model. Each phase must be completely finished before the next phase begins, and there is no overlapping. 
+            <br><br>The sequence is: <em>Requirements &rarr; Design &rarr; Implementation (Coding) &rarr; Testing &rarr; Deployment &rarr; Maintenance</em>. It is simple but rigid, making it difficult to adapt to changes once a phase is complete.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">12. List the different Methodologies in Agile Development Model. (Also answers Q29)</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Scrum:</strong> Focuses on short iterations called sprints and daily stand-up meetings.</li>
+                    <li><strong>Kanban:</strong> Focuses on continuous delivery and visual management of tasks using a Kanban board.</li>
+                    <li><strong>Extreme Programming (XP):</strong> Focuses on technical excellence, pair programming, and frequent releases.</li>
+                    <li><strong>Feature-Driven Development (FDD):</strong> Focuses on building models and building by feature.</li>
+                    <li><strong>Lean Software Development:</strong> Focuses on eliminating waste and amplifying learning.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">14. Explain AI-driven test case generation.</div>
+            <div class="answer">AI-driven test case generation uses machine learning algorithms and natural language processing to automatically read software requirements, analyze source code, or monitor user behavior to generate optimal and high-coverage test cases without human intervention. This speeds up the testing phase and identifies edge cases that manual testers might miss.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">15. Develop a program to implement a letter grading procedure. Determine basis paths and derive cases. (Also answers Q31)</div>
+            <div class="answer">
+                <strong>Assumed Logic:</strong> If marks $\ge 90$ (Grade A), else if marks $\ge 80$ (Grade B), else (Grade C).
+                <br><br><strong>Pseudocode:</strong>
+                <pre style="background: #222; padding: 10px; border-radius: 5px; color: #03dac6;">
+1. Input marks
+2. If (marks >= 90)
+3.    Return "A"
+4. Else If (marks >= 80)
+5.    Return "B"
+6. Else
+7.    Return "C"
+8. End</pre>
+                <strong>Basis Paths (Independent Execution Paths):</strong>
+                <ul>
+                    <li>Path 1: 1 &rarr; 2 &rarr; 3 &rarr; 8 (Evaluates True for $\ge 90$)</li>
+                    <li>Path 2: 1 &rarr; 2 &rarr; 4 &rarr; 5 &rarr; 8 (Evaluates False for $\ge 90$, True for $\ge 80$)</li>
+                    <li>Path 3: 1 &rarr; 2 &rarr; 4 &rarr; 6 &rarr; 7 &rarr; 8 (Evaluates False for both, default)</li>
+                </ul>
+                <strong>Derived Test Cases:</strong>
+                <ul>
+                    <li><em>Test Case 1 (covers Path 1):</em> Input = 95. Expected Result = A</li>
+                    <li><em>Test Case 2 (covers Path 2):</em> Input = 85. Expected Result = B</li>
+                    <li><em>Test Case 3 (covers Path 3):</em> Input = 75. Expected Result = C</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">16. Construct the SDLC with the help of a neat diagram. (Also answers Q27 & Q34)</div>
+            <div class="answer">The Software Development Life Cycle (SDLC) is the structured process used for developing software.<br>
+            <div style="text-align: center; margin: 25px 0;">
+                <svg width="100%" style="max-width: 600px;" height="100" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                        .sdlc-box { fill: #1e1e1e; stroke: #bb86fc; stroke-width: 2; rx: 5; }
+                        .sdlc-text { fill: #e0e0e0; font-family: 'Inter', sans-serif; font-size: 11px; text-anchor: middle; font-weight: bold; }
+                        .sdlc-arrow { stroke: #03dac6; stroke-width: 2; fill: none; }
+                    </style>
+                    <defs>
+                        <marker id="sdlc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" />
+                        </marker>
+                    </defs>
+                    
+                    <rect x="0" y="30" width="85" height="40" class="sdlc-box"/>
+                    <text x="42.5" y="55" class="sdlc-text">Planning</text>
+
+                    <rect x="115" y="30" width="85" height="40" class="sdlc-box"/>
+                    <text x="157.5" y="55" class="sdlc-text">Analysis</text>
+
+                    <rect x="230" y="30" width="85" height="40" class="sdlc-box"/>
+                    <text x="272.5" y="55" class="sdlc-text">Design</text>
+
+                    <rect x="345" y="30" width="85" height="40" class="sdlc-box"/>
+                    <text x="387.5" y="55" class="sdlc-text">Coding</text>
+
+                    <rect x="460" y="30" width="65" height="40" class="sdlc-box"/>
+                    <text x="492.5" y="55" class="sdlc-text">Testing</text>
+
+                    <rect x="555" y="30" width="45" height="40" class="sdlc-box"/>
+                    <text x="577.5" y="55" class="sdlc-text" font-size="9px">Maint.</text>
+
+                    <path d="M 85 50 L 110 50" class="sdlc-arrow" marker-end="url(#sdlc-arrow)"/>
+                    <path d="M 200 50 L 225 50" class="sdlc-arrow" marker-end="url(#sdlc-arrow)"/>
+                    <path d="M 315 50 L 340 50" class="sdlc-arrow" marker-end="url(#sdlc-arrow)"/>
+                    <path d="M 430 50 L 455 50" class="sdlc-arrow" marker-end="url(#sdlc-arrow)"/>
+                    <path d="M 525 50 L 550 50" class="sdlc-arrow" marker-end="url(#sdlc-arrow)"/>
+                </svg>
+            </div>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">17. Compare Software errors and Software faults.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Software Error:</strong> An error is a human action or mistake (e.g., a developer writing the wrong logic or syntax) that produces an incorrect result.</li>
+                    <li><strong>Software Fault:</strong> A fault (defect or bug) is the manifestation of that human error within the software code. If an error is made, it results in a fault inside the program.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">18. Explain the procedure of Manual testing? Mention the advantages.</div>
+            <div class="answer">
+                <strong>Procedure:</strong> 1) Analyze requirements. 2) Write test plan and test cases. 3) Set up the testing environment. 4) Execute test cases manually step-by-step as an end-user without automation tools. 5) Log defects for any failed tests. 6) Re-test once fixed. <br><br>
+                <strong>Advantages:</strong> Enables exploratory testing, allows evaluation of UX/UI visually, no programming knowledge required, cheaper for short-term projects, and catches easily noticeable human errors.
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">19. A wholesaler sells printer cartridges (Min order 5, Discount for 100+). Prepare test cases using Boundary Value Analysis.</div>
+            <div class="answer">
+                <strong>Partitions:</strong>
+                <ul>
+                    <li>Invalid (Too low): $ < 5 $</li>
+                    <li>Valid (No Discount): $ 5 $ to $ 99 $</li>
+                    <li>Valid (Discount): $ \ge 100 $</li>
+                </ul>
+                <strong>Boundary Values to Test:</strong> 4, 5, 6 (Lower Boundary) and 99, 100, 101 (Upper Boundary).<br><br>
+                <strong>Groups of 3 test inputs generated using BVA:</strong>
+                <br><em>Group 1 (Testing Minimum Boundary):</em> { 4 (Invalid), 5 (Valid-Min), 6 (Valid) }
+                <br><em>Group 2 (Testing Discount Boundary):</em> { 99 (Valid-No Discount), 100 (Valid-Discount-Min), 101 (Valid-Discount) }
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">20. Explain the primary goal of AI in SQA?</div>
+            <div class="answer">The primary goal of AI in Software Quality Assurance is to make testing smarter, faster, and more efficient. It aims to automate repetitive tasks, predict defect hotspots based on historical data, self-heal flaky test scripts when UI elements change, and continuously adapt testing strategies to ensure maximum coverage with minimum manual maintenance.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">21. Discuss the V-Model with the help of its Demerits and Merits.</div>
+            <div class="answer">The V-Model (Verification and Validation model) is an extension of the Waterfall model where testing phases are planned in parallel with a corresponding phase of development, forming a V-shape.
+            <div style="text-align: center; margin: 15px 0;">
+                <svg width="100%" style="max-width: 400px;" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                        .v-box { fill: #1e1e1e; stroke: #cf6679; stroke-width: 2; rx: 4; }
+                        .v-text { fill: #e0e0e0; font-family: 'Inter', sans-serif; font-size: 11px; text-anchor: middle; font-weight: bold; }
+                        .v-arrow { stroke: #03dac6; stroke-width: 1.5; fill: none; stroke-dasharray: 4; }
+                    </style>
+                    <!-- Left side: Verification -->
+                    <rect x="20" y="20" width="100" height="30" class="v-box"/>
+                    <text x="70" y="40" class="v-text">Requirements</text>
+                    <rect x="60" y="65" width="100" height="30" class="v-box"/>
+                    <text x="110" y="85" class="v-text">High Level Des.</text>
+                    <rect x="100" y="110" width="100" height="30" class="v-box"/>
+                    <text x="150" y="130" class="v-text">Low Level Des.</text>
+                    
+                    <!-- Bottom -->
+                    <rect x="150" y="150" width="100" height="30" class="v-box" style="stroke:#bb86fc;"/>
+                    <text x="200" y="170" class="v-text">Coding</text>
+
+                    <!-- Right side: Validation -->
+                    <rect x="200" y="110" width="100" height="30" class="v-box"/>
+                    <text x="250" y="130" class="v-text">Unit Testing</text>
+                    <rect x="240" y="65" width="100" height="30" class="v-box"/>
+                    <text x="290" y="85" class="v-text">Integ. Testing</text>
+                    <rect x="280" y="20" width="100" height="30" class="v-box"/>
+                    <text x="330" y="40" class="v-text">UAT Testing</text>
+
+                    <!-- Mapping arrows -->
+                    <path d="M 120 35 L 280 35" class="v-arrow" />
+                    <path d="M 160 80 L 240 80" class="v-arrow" />
+                </svg>
+            </div>
+            <strong>Merits:</strong> Highly disciplined; testing activities start early; easy to understand and manage; defects are found early reducing cost.<br>
+            <strong>Demerits:</strong> Extremely rigid; very difficult to go back and change functionality; not suited for dynamic or agile projects.
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">22. Construct the Software Testing Life Cycle (STLC).</div>
+            <div class="answer">The activities in STLC include:
+                <ol>
+                    <li><strong>Requirement Analysis:</strong> Testers analyze requirements to identify testable elements.</li>
+                    <li><strong>Test Planning:</strong> Strategy is defined, effort is estimated, and resources are planned.</li>
+                    <li><strong>Test Case Development:</strong> Creating, verifying, and preparing test cases and test data.</li>
+                    <li><strong>Environment Setup:</strong> Configuring the hardware and software conditions for testing.</li>
+                    <li><strong>Test Execution:</strong> Running the tests, logging results, and raising defects for failures.</li>
+                    <li><strong>Test Cycle Closure:</strong> Evaluating cycle completion criteria, generating test metrics, and preparing the test summary report.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">23. Contrast AI-based test automation from traditional test automation.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Traditional Automation:</strong> Script-based and rigid. If a UI element ID changes on the web page, the test script breaks and requires manual maintenance by a developer.</li>
+                    <li><strong>AI-based Automation:</strong> Uses "self-healing" technology. It understands the underlying DOM visually. If an element moves or its ID changes, the AI automatically identifies the new element and updates the test dynamically without human intervention.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">24. Explain Rapid Application Development (RAD)?</div>
+            <div class="answer">RAD is an agile project management strategy popular in software development. It prioritizes rapid prototyping and iterative delivery over strict, prolonged planning. It allows developers to quickly adjust to changing requirements based on immediate user feedback by building components in parallel.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">25. Relate Quality assurance with Quality control. Justify your answer that QA is not QC.</div>
+            <div class="answer">While both aim to deliver a quality product, they are distinct:
+                <ul>
+                    <li><strong>Quality Assurance (QA):</strong> is <em>preventive</em> and <em>process-oriented</em>. It focuses on setting up correct methodologies, standards, and processes to prevent defects from occurring during development.</li>
+                    <li><strong>Quality Control (QC):</strong> is <em>reactive</em> and <em>product-oriented</em>. It focuses on executing tests (Software Testing) on the finished product to identify and fix defects before release.</li>
+                </ul>
+                <strong>Justification:</strong> QA ensures you are doing the right things in the right way, whereas QC verifies that the results of what you've done are exactly what was expected.
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">26. List out Test Deliverables with brief explanation.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Test Plan:</strong> Document detailing the scope, approach, and resources.</li>
+                    <li><strong>Test Cases/Scripts:</strong> Specific steps, inputs, and expected outcomes.</li>
+                    <li><strong>RTM:</strong> Document tracing requirements to test cases.</li>
+                    <li><strong>Defect Report:</strong> Log detailing the bugs found during execution.</li>
+                    <li><strong>Test Summary Report:</strong> Final document summarizing testing activities and final software quality metric.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">28. Illustrate boundary value test cases for a Pizza delivery app (Valid 1 to 10).</div>
+            <div class="answer">
+                <strong>Conditions:</strong> 1 to 10 (Valid). 11 to 99 (Invalid).<br>
+                <strong>Boundary Values to Test:</strong> 0, 1, 2, 9, 10, 11, 99, 100.<br>
+                <strong>Test Cases:</strong>
+                <ul>
+                    <li>Input: 0 &rarr; Expected: ERROR (Below minimum boundary)</li>
+                    <li>Input: 1 &rarr; Expected: ORDER SUCCESS (Valid Minimum)</li>
+                    <li>Input: 2 &rarr; Expected: ORDER SUCCESS (Valid Minimum + 1)</li>
+                    <li>Input: 9 &rarr; Expected: ORDER SUCCESS (Valid Maximum - 1)</li>
+                    <li>Input: 10 &rarr; Expected: ORDER SUCCESS (Valid Maximum)</li>
+                    <li>Input: 11 &rarr; Expected: ERROR "Only 10 Pizza can be ordered" (Invalid Minimum)</li>
+                    <li>Input: 99 &rarr; Expected: ERROR "Only 10 Pizza can be ordered" (Invalid Maximum)</li>
+                    <li>Input: 100 &rarr; Expected: ERROR (Above maximum boundary)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">30. Construct BVA with an example.</div>
+            <div class="answer">Boundary Value Analysis focuses on the edges of equivalence classes. <br>
+            <strong>Example:</strong> A system accepts a password length of 6 to 12 characters.<br>
+            <strong>Boundaries:</strong> Lower boundary = 6. Upper boundary = 12.<br>
+            <strong>BVA Test Inputs:</strong>
+            <ul>
+                <li>Lower Boundary check: 5 (Invalid), 6 (Valid), 7 (Valid).</li>
+                <li>Upper Boundary check: 11 (Valid), 12 (Valid), 13 (Invalid).</li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">32. Explain the AI driven test effectiveness measurement.</div>
+            <div class="answer">AI-driven test effectiveness measurement involves using machine learning to analyze massive amounts of test execution data, code coverage, and production defects. The AI predicts how effectively a current test suite can catch future bugs, identifies redundant test cases that don't add value, and flags code areas that are highly vulnerable but poorly covered by tests.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">33. Demonstrate the tasks of Test Closure activities in Software Testing?</div>
+            <div class="answer">Test Closure is the final phase of STLC. Tasks include:
+                <ul>
+                    <li>Checking if all planned tests have run and testing criteria are met.</li>
+                    <li>Documenting lessons learned and best practices for future projects.</li>
+                    <li>Archiving test environments, test cases, and test data (Testware).</li>
+                    <li>Preparing and distributing the final <strong>Test Summary Report</strong> to stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
     <!-- JavaScript for Tab Switching -->
