@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI and Software Testing - Study Guide</title>
+    <title>AI, Software Testing & Cloud - Study Guide</title>
     
     <!-- Import Modern Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,22 +75,29 @@
             display: flex;
             justify-content: center;
             margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
         }
         .tab-container {
-            display: inline-flex;
-            background-color: var(--bg-card);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(10px);
             padding: 6px;
             border-radius: 50px;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            max-width: 100%;
         }
         .tab-button {
             background: transparent;
             color: var(--text-muted);
             border: none;
             border-radius: 50px;
-            padding: 12px 30px;
-            font-size: 1rem;
+            padding: 12px 25px;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -145,7 +152,7 @@
         }
         
         /* Elements inside Answers */
-        ul { margin-top: 10px; margin-bottom: 10px; padding-left: 20px; }
+        ul, ol { margin-top: 10px; margin-bottom: 10px; padding-left: 20px; }
         li { margin-bottom: 8px; }
         strong { color: #fff; }
         em { color: var(--accent-secondary); font-style: normal; font-weight: 600;}
@@ -154,7 +161,7 @@
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
             h1 { font-size: 2rem; }
-            .tab-container { flex-direction: column; border-radius: 16px; width: 100%; }
+            .tab-container { flex-direction: column; border-radius: 16px; width: 100%; gap: 5px;}
             .tab-button { border-radius: 12px; text-align: center; }
             .qa-card { padding: 20px; }
         }
@@ -168,124 +175,45 @@
 </head>
 <body>
 
-    <h1>AI and Software Testing</h1>
-    <div class="subtitle">Complete Study Guide & Question Bank</div>
+    <h1>Master Study Guide</h1>
+    <div class="subtitle">AI, Software Testing & Cloud Computing</div>
 
     <!-- Premium Tab Navigation -->
     <div class="tab-wrapper">
         <div class="tab-container">
             <button class="tab-button active" onclick="openTab('module1', this)">AI: Intro & Agents</button>
-            <button class="tab-button" onclick="openTab('module2', this)">AI: Logic & Reasoning</button>
+            <button class="tab-button" onclick="openTab('module2', this)">AI: Logic</button>
             <button class="tab-button" onclick="openTab('st-module', this)">Software Testing</button>
+            <button class="tab-button" onclick="openTab('cc-module', this)">Cloud Computing</button>
         </div>
     </div>
 
-    <!-- MODULE 1 CONTENT -->
+    <!-- MODULE 1 CONTENT (AI) -->
     <div id="module1" class="tab-content active">
         <h2>A. Two-Mark Questions (Short Answer)</h2>
         
-        <div class="qa-card">
-            <div class="question">1. Define Artificial Intelligence (AI).</div>
-            <div class="answer">AI is a system that observes its environment, processes inputs, and takes actions to achieve a specific goal.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">2. State any two objectives of Artificial Intelligence.</div>
-            <div class="answer">1) To build systems that exhibit intelligent behavior, learn, and advise humans. <br> 2) To understand and model human cognitive processes computationally.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">3. What is meant by an intelligent agent?</div>
-            <div class="answer">An intelligent agent is a system that uses sensors to gather data from its environment and applies decision rules or learning methods to choose the right action to achieve a goal.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">4. Define a rational agent.</div>
-            <div class="answer">A rational agent is one that acts to maximize its expected performance measure based on the data it has perceived and its built-in knowledge.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">5. List any two foundations of Artificial Intelligence.</div>
-            <div class="answer">Philosophy (logic, reasoning, mind) and Mathematics (probability, algorithms, optimization).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">6. What is an agent–environment interaction?</div>
-            <div class="answer">It is the continuous cycle where an agent observes its environment through sensors, processes the data, and acts upon the environment using its actuators.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">7. Mention any two applications of Artificial Intelligence.</div>
-            <div class="answer">Healthcare (for diagnosis) and Finance (for fraud detection).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">8. What is a performance measure in the context of intelligent agents?</div>
-            <div class="answer">An objective criterion or metric used to evaluate how successful an agent is at achieving its intended goals or desired outcomes.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">9. Define environment in Artificial Intelligence.</div>
-            <div class="answer">The external world, domain, or condition set in which an agent operates, perceives inputs, and executes its actions.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">10. State any two characteristics of an intelligent agent.</div>
-            <div class="answer">1) They adapt to changing situations in their environment. <br> 2) They evaluate outcomes and adjust behavior over time.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">11. What are sensors in an intelligent agent?</div>
-            <div class="answer">Sensors are the mechanisms or inputs an agent uses to gather data and perceive the state of its environment.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">12. What are actuators in an intelligent agent?</div>
-            <div class="answer">Actuators are the mechanisms or outputs through which an agent carries out its chosen actions to alter or affect its environment.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">13. Mention any two important milestones in the history of AI.</div>
-            <div class="answer">1) The 1956 Dartmouth Conference where the term "Artificial Intelligence" was coined. <br> 2) The development of deep learning models in the 2010s that revolutionized computer vision and natural language processing.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">14. What is meant by autonomy of an agent?</div>
-            <div class="answer">Autonomy is an agent's ability to operate independently, learning and adapting its behavior based on its own experience rather than relying strictly on pre-programmed human knowledge.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">15. Define learning agent.</div>
-            <div class="answer">A learning agent is an AI that gathers experience through interaction, evaluates feedback, and updates its behavior to perform better with each cycle.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">16. What is meant by PEAS? Expand the term.</div>
-            <div class="answer">PEAS is a framework used to define an agent's operational parameters. It stands for <strong>P</strong>erformance measure, <strong>E</strong>nvironment, <strong>A</strong>ctuators, and <strong>S</strong>ensors.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">17. What is a task environment?</div>
-            <div class="answer">The task environment is the specific "problem" an agent is designed to solve, formally defined by the PEAS framework.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">18. Distinguish between an agent and an environment (any two points).</div>
-            <div class="answer">1) The agent acts and makes decisions, whereas the environment is the space that receives those actions. <br> 2) The agent contains decision rules and memory, while the environment generates the inputs and feedback the agent learns from.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">19. What is meant by artificial intelligence as a science?</div>
-            <div class="answer">It is the interdisciplinary scientific study focused on understanding the principles of intelligence and building computational models that replicate cognitive functions like reasoning and problem-solving.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">20. List any two components of an intelligent agent.</div>
-            <div class="answer">Sensors (to gather data) and decision rules/learning methods (to choose the right action).</div>
-        </div>
+        <div class="qa-card"><div class="question">1. Define Artificial Intelligence (AI).</div><div class="answer">AI is a system that observes its environment, processes inputs, and takes actions to achieve a specific goal.</div></div>
+        <div class="qa-card"><div class="question">2. State any two objectives of Artificial Intelligence.</div><div class="answer">1) To build systems that exhibit intelligent behavior, learn, and advise humans. <br> 2) To understand and model human cognitive processes computationally.</div></div>
+        <div class="qa-card"><div class="question">3. What is meant by an intelligent agent?</div><div class="answer">An intelligent agent is a system that uses sensors to gather data from its environment and applies decision rules or learning methods to choose the right action to achieve a goal.</div></div>
+        <div class="qa-card"><div class="question">4. Define a rational agent.</div><div class="answer">A rational agent is one that acts to maximize its expected performance measure based on the data it has perceived and its built-in knowledge.</div></div>
+        <div class="qa-card"><div class="question">5. List any two foundations of Artificial Intelligence.</div><div class="answer">Philosophy (logic, reasoning, mind) and Mathematics (probability, algorithms, optimization).</div></div>
+        <div class="qa-card"><div class="question">6. What is an agent–environment interaction?</div><div class="answer">It is the continuous cycle where an agent observes its environment through sensors, processes the data, and acts upon the environment using its actuators.</div></div>
+        <div class="qa-card"><div class="question">7. Mention any two applications of Artificial Intelligence.</div><div class="answer">Healthcare (for diagnosis) and Finance (for fraud detection).</div></div>
+        <div class="qa-card"><div class="question">8. What is a performance measure in the context of intelligent agents?</div><div class="answer">An objective criterion or metric used to evaluate how successful an agent is at achieving its intended goals or desired outcomes.</div></div>
+        <div class="qa-card"><div class="question">9. Define environment in Artificial Intelligence.</div><div class="answer">The external world, domain, or condition set in which an agent operates, perceives inputs, and executes its actions.</div></div>
+        <div class="qa-card"><div class="question">10. State any two characteristics of an intelligent agent.</div><div class="answer">1) They adapt to changing situations in their environment. <br> 2) They evaluate outcomes and adjust behavior over time.</div></div>
+        <div class="qa-card"><div class="question">11. What are sensors in an intelligent agent?</div><div class="answer">Sensors are the mechanisms or inputs an agent uses to gather data and perceive the state of its environment.</div></div>
+        <div class="qa-card"><div class="question">12. What are actuators in an intelligent agent?</div><div class="answer">Actuators are the mechanisms or outputs through which an agent carries out its chosen actions to alter or affect its environment.</div></div>
+        <div class="qa-card"><div class="question">13. Mention any two important milestones in the history of AI.</div><div class="answer">1) The 1956 Dartmouth Conference where the term "Artificial Intelligence" was coined. <br> 2) The development of deep learning models in the 2010s that revolutionized computer vision and natural language processing.</div></div>
+        <div class="qa-card"><div class="question">14. What is meant by autonomy of an agent?</div><div class="answer">Autonomy is an agent's ability to operate independently, learning and adapting its behavior based on its own experience rather than relying strictly on pre-programmed human knowledge.</div></div>
+        <div class="qa-card"><div class="question">15. Define learning agent.</div><div class="answer">A learning agent is an AI that gathers experience through interaction, evaluates feedback, and updates its behavior to perform better with each cycle.</div></div>
+        <div class="qa-card"><div class="question">16. What is meant by PEAS? Expand the term.</div><div class="answer">PEAS is a framework used to define an agent's operational parameters. It stands for <strong>P</strong>erformance measure, <strong>E</strong>nvironment, <strong>A</strong>ctuators, and <strong>S</strong>ensors.</div></div>
+        <div class="qa-card"><div class="question">17. What is a task environment?</div><div class="answer">The task environment is the specific "problem" an agent is designed to solve, formally defined by the PEAS framework.</div></div>
+        <div class="qa-card"><div class="question">18. Distinguish between an agent and an environment (any two points).</div><div class="answer">1) The agent acts and makes decisions, whereas the environment is the space that receives those actions. <br> 2) The agent contains decision rules and memory, while the environment generates the inputs and feedback the agent learns from.</div></div>
+        <div class="qa-card"><div class="question">19. What is meant by artificial intelligence as a science?</div><div class="answer">It is the interdisciplinary scientific study focused on understanding the principles of intelligence and building computational models that replicate cognitive functions like reasoning and problem-solving.</div></div>
+        <div class="qa-card"><div class="question">20. List any two components of an intelligent agent.</div><div class="answer">Sensors (to gather data) and decision rules/learning methods (to choose the right action).</div></div>
 
         <h2>B. Five-Mark Questions (Brief Answer)</h2>
-        
         <div class="qa-card">
             <div class="question">1. Explain the concept of Artificial Intelligence with suitable examples.</div>
             <div class="answer">Artificial Intelligence is the simulation of human intelligence by machines, enabling them to process information, adapt to situations, and make autonomous decisions. Unlike regular programs with fixed instructions, AI evaluates outcomes and adjusts its behavior. For example, a recommendation engine uses AI to analyze your viewing habits and suggest movies, or an autonomous vehicle processes real-time camera data to navigate traffic safely.</div>
@@ -399,7 +327,6 @@
         </div>
 
         <h2>C. Ten-Mark Questions (Essay Type)</h2>
-        
         <div class="qa-card">
             <div class="question">1. Define Artificial Intelligence. Explain its foundations and applications in detail.</div>
             <div class="answer">
@@ -445,7 +372,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="qa-card">
             <div class="question">4. Discuss various types of intelligent agents with suitable examples.</div>
             <div class="answer">
@@ -454,9 +381,7 @@
                     <li><strong>Simple Reflex Agents:</strong> React exclusively to current inputs following predefined condition-action rules and do not store past information. <em>Example: Thermostats and automatic doors, which operate in fully observable and predictable environments.</em>
                         <div style="text-align: center; margin: 20px 0;">
                             <svg width="100%" style="max-width: 450px;" height="120" viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <marker id="arrow-sr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker>
-                                </defs>
+                                <defs><marker id="arrow-sr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker></defs>
                                 <rect x="100" y="10" width="250" height="70" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2" rx="5"/>
                                 <rect x="125" y="30" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="1.5" rx="5"/>
                                 <text x="225" y="50" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Condition-Action Rules</text>
@@ -472,9 +397,7 @@
                     <li><strong>Model-Based Agents:</strong> Maintain an internal state to track unseen portions of their environment, combining current perceptions with stored information. <em>Example: Adaptive control systems and robotics that must consider past states before acting.</em>
                         <div style="text-align: center; margin: 20px 0;">
                             <svg width="100%" style="max-width: 450px;" height="160" viewBox="0 0 450 160" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <marker id="arrow-mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker>
-                                </defs>
+                                <defs><marker id="arrow-mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker></defs>
                                 <rect x="100" y="10" width="250" height="110" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2" rx="5"/>
                                 <rect x="125" y="25" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="1.5" rx="5"/>
                                 <text x="225" y="45" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">State &amp; World Model</text>
@@ -491,75 +414,10 @@
                         </div>
                     </li>
                     <li><strong>Goal-Based Agents:</strong> Evaluate possible steps and compare choices to select the path that moves them closer to a long-term outcome. <em>Example: Navigation and complex problem-solving systems that require search and planning techniques.</em>
-                        <div style="text-align: center; margin: 20px 0;">
-                            <svg width="100%" style="max-width: 450px;" height="160" viewBox="0 0 450 160" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <marker id="arrow-gb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker>
-                                </defs>
-                                <rect x="100" y="10" width="250" height="110" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2" rx="5"/>
-                                <rect x="125" y="25" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="1.5" rx="5"/>
-                                <text x="225" y="45" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">State &amp; World Model</text>
-                                <rect x="125" y="75" width="200" height="30" fill="#2a2a2a" stroke="#cf6679" stroke-width="1.5" rx="5"/>
-                                <text x="225" y="95" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle" font-weight="bold">Goals (What happens if I do A?)</text>
-                                <rect x="20" y="130" width="410" height="25" fill="#2c2c2c" stroke="#cf6679" stroke-width="2" rx="5"/>
-                                <text x="225" y="147" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Environment</text>
-                                <path d="M 225 55 L 225 75" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-gb)"/>
-                                <path d="M 150 130 L 150 40" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-gb)"/>
-                                <text x="110" y="85" fill="#aaa" font-family="Inter" font-size="11px">Percepts</text>
-                                <path d="M 300 105 L 300 130" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-gb)"/>
-                                <text x="310" y="120" fill="#aaa" font-family="Inter" font-size="11px">Actions</text>
-                            </svg>
-                        </div>
                     </li>
                     <li><strong>Utility-Based Agents:</strong> Assign utility scores to potential results and select the action that yields the highest benefit. <em>Example: Systems operating in uncertain environments that must balance multiple valid choices, such as trading off speed versus safety.</em>
-                        <div style="text-align: center; margin: 20px 0;">
-                            <svg width="100%" style="max-width: 450px;" height="160" viewBox="0 0 450 160" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <marker id="arrow-ub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker>
-                                </defs>
-                                <rect x="100" y="10" width="250" height="110" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2" rx="5"/>
-                                <rect x="125" y="25" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="1.5" rx="5"/>
-                                <text x="225" y="45" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">State &amp; World Model</text>
-                                <rect x="125" y="75" width="200" height="30" fill="#2a2a2a" stroke="#bb86fc" stroke-width="1.5" rx="5"/>
-                                <text x="225" y="95" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Utility (How happy will I be?)</text>
-                                <rect x="20" y="130" width="410" height="25" fill="#2c2c2c" stroke="#cf6679" stroke-width="2" rx="5"/>
-                                <text x="225" y="147" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Environment</text>
-                                <path d="M 225 55 L 225 75" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-ub)"/>
-                                <path d="M 150 130 L 150 40" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-ub)"/>
-                                <text x="110" y="85" fill="#aaa" font-family="Inter" font-size="11px">Percepts</text>
-                                <path d="M 300 105 L 300 130" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-ub)"/>
-                                <text x="310" y="120" fill="#aaa" font-family="Inter" font-size="11px">Actions</text>
-                            </svg>
-                        </div>
                     </li>
                     <li><strong>Learning Agents:</strong> Gather experience through interaction, evaluate feedback, and update their behavior to perform better over time. <em>Example: Autonomous vehicles and recommendation engines where patterns evolve and rules cannot be pre-programmed.</em>
-                        <div style="text-align: center; margin: 20px 0;">
-                            <svg width="100%" style="max-width: 450px;" height="190" viewBox="0 0 450 190" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <marker id="arrow-la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#03dac6" /></marker>
-                                    <marker id="arrow-la-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#cf6679" /></marker>
-                                </defs>
-                                <rect x="80" y="10" width="290" height="140" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2" rx="5"/>
-                                <rect x="100" y="25" width="80" height="40" fill="#2a2a2a" stroke="#cf6679" stroke-width="1.5" rx="5"/>
-                                <text x="140" y="50" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle" font-weight="bold">Critic</text>
-                                <rect x="210" y="25" width="140" height="40" fill="#2a2a2a" stroke="#03dac6" stroke-width="1.5" rx="5"/>
-                                <text x="280" y="50" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle" font-weight="bold">Learning Element</text>
-                                <rect x="100" y="95" width="250" height="30" fill="#2a2a2a" stroke="#bb86fc" stroke-width="1.5" rx="5"/>
-                                <text x="225" y="115" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Performance Element</text>
-                                <rect x="20" y="160" width="410" height="25" fill="#2c2c2c" stroke="#cf6679" stroke-width="2" rx="5"/>
-                                <text x="225" y="177" fill="#e0e0e0" font-family="Inter" font-size="13px" text-anchor="middle" font-weight="bold">Environment</text>
-                                
-                                <path d="M 140 65 L 140 95" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-la)"/>
-                                <path d="M 280 65 L 280 95" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-la)"/>
-                                <path d="M 180 45 L 210 45" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-la)"/>
-                                
-                                <path d="M 140 160 L 140 65" stroke="#cf6679" stroke-width="2" fill="none" marker-end="url(#arrow-la-red)"/>
-                                <text x="110" y="150" fill="#cf6679" font-family="Inter" font-size="10px">Feedback</text>
-                    
-                                <path d="M 300 125 L 300 160" stroke="#03dac6" stroke-width="2" fill="none" marker-end="url(#arrow-la)"/>
-                                <text x="310" y="150" fill="#aaa" font-family="Inter" font-size="11px">Actions</text>
-                            </svg>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -589,124 +447,33 @@
                 </ul>
             </div>
         </div>
-
-        <div class="qa-card">
-            <div class="question">7. Explain the concept of rational agents and performance measures with examples.</div>
-            <div class="answer">
-                <strong>Concept:</strong> A rational agent is a system that chooses the action that maximizes its expected performance measure, given its current percept sequence and prior knowledge. Rationality is about optimal decision-making, not perfection or omniscience. It involves evaluating outcomes and taking actions logically to achieve a goal.<br><br>
-                <strong>Performance Measures & Utility:</strong> A performance measure is the criteria used to evaluate the agent's success. To maximize this rationally, utility-based agents compute which outcome brings the highest benefit by assigning values to potential results. This allows the agent to navigate uncertain environments by balancing competing performance measures.<br><br>
-                <strong>Example:</strong> Consider an autonomous taxi. Its performance measures include safety, speed, passenger comfort, and obeying traffic laws. If the taxi faces multiple valid choices (e.g., a fast but bumpy road vs. a slower but smooth road), evaluating utility scores helps it make the most beneficial, rational decision depending on the weighted priority of those performance measures.
-            </div>
-        </div>
     </div>
 
 
-    <!-- MODULE 2 CONTENT -->
+    <!-- MODULE 2 CONTENT (AI) -->
     <div id="module2" class="tab-content">
         <h2>A. 2 Mark Questions (Very Short Answer)</h2>
         
-        <div class="qa-card">
-            <div class="question">1. What is Knowledge Representation (KR)?</div>
-            <div class="answer">KR is the method of formulating knowledge about the real world in a structured form so that a computer system can utilize it to solve complex tasks.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">2. Define a Knowledge-Based Agent.</div>
-            <div class="answer">A Knowledge-Based Agent is an intelligent agent that maintains an internal state of knowledge (a Knowledge Base) and uses reasoning mechanisms to decide what actions to take.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">3. What is a Knowledge Base?</div>
-            <div class="answer">A Knowledge Base (KB) is a centralized repository of facts, rules, and relationships used by an AI system to reason and make decisions.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">4. State any two components of a Knowledge-Based System.</div>
-            <div class="answer">1) The Knowledge Base (KB) <br> 2) The Inference Engine.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">5. What is declarative knowledge?</div>
-            <div class="answer">Declarative knowledge consists of factual information about the domain (knowing "what" is true), such as facts and rules.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">6. Define procedural knowledge.</div>
-            <div class="answer">Procedural knowledge is information on how to perform a task (knowing "how"), often represented as a sequence of steps, rules, or instructions.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">7. What is a Frame in AI?</div>
-            <div class="answer">A frame is an object-oriented data structure used to divide knowledge into substructures by representing stereotyped situations, entities, or concepts.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">8. What is meant by a slot in frame structures?</div>
-            <div class="answer">A slot is an attribute or property within a frame. For example, a "Car" frame might have a "Color" slot.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">9. Define Propositional Logic.</div>
-            <div class="answer">Propositional Logic is a branch of logic that deals with propositions (statements that are objectively true or false) and their combinations using logical connectives.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">10. What is a proposition?</div>
-            <div class="answer">A proposition is a declarative statement that has a definitive truth value—it must be either strictly True or False, but not both.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">11. Name any two logical connectives.</div>
-            <div class="answer">1) AND (Conjunction, $\land$) <br> 2) OR (Disjunction, $\lor$).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">12. What is First Order Logic (FOL)?</div>
-            <div class="answer">FOL is an expressive logical system extending propositional logic by incorporating objects, predicates (relations), variables, and quantifiers.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">13. What is a predicate?</div>
-            <div class="answer">A predicate represents a property of an object or a relationship between multiple objects, evaluating to true or false (e.g., Brother(John, Mary)).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">14. Define quantifiers in FOL.</div>
-            <div class="answer">Quantifiers are logical symbols used to specify the scope of truth for a formula over a specific domain of variables.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">15. What is universal quantifier ($\forall$)?</div>
-            <div class="answer">The universal quantifier implies that a statement holds True for <strong>all</strong> elements within a particular domain.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">16. What is existential quantifier ($\exists$)?</div>
-            <div class="answer">The existential quantifier implies that there exists <strong>at least one</strong> element in the domain for which the statement holds True.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">17. What is inference in AI?</div>
-            <div class="answer">Inference is the cognitive or computational process of deriving new knowledge or logical conclusions from existing facts and premises.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">18. What is an inference rule?</div>
-            <div class="answer">An inference rule is a standard, logically sound template used to deduce a conclusion from a given set of premises (e.g., Modus Ponens).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">19. Define reasoning.</div>
-            <div class="answer">Reasoning is the mental process of drawing logical inferences or conclusions based on existing knowledge, facts, and beliefs.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">20. Mention any two types of reasoning.</div>
-            <div class="answer">1) Deductive Reasoning <br> 2) Inductive Reasoning.</div>
-        </div>
+        <div class="qa-card"><div class="question">1. What is Knowledge Representation (KR)?</div><div class="answer">KR is the method of formulating knowledge about the real world in a structured form so that a computer system can utilize it to solve complex tasks.</div></div>
+        <div class="qa-card"><div class="question">2. Define a Knowledge-Based Agent.</div><div class="answer">A Knowledge-Based Agent is an intelligent agent that maintains an internal state of knowledge (a Knowledge Base) and uses reasoning mechanisms to decide what actions to take.</div></div>
+        <div class="qa-card"><div class="question">3. What is a Knowledge Base?</div><div class="answer">A Knowledge Base (KB) is a centralized repository of facts, rules, and relationships used by an AI system to reason and make decisions.</div></div>
+        <div class="qa-card"><div class="question">4. State any two components of a Knowledge-Based System.</div><div class="answer">1) The Knowledge Base (KB) <br> 2) The Inference Engine.</div></div>
+        <div class="qa-card"><div class="question">5. What is declarative knowledge?</div><div class="answer">Declarative knowledge consists of factual information about the domain (knowing "what" is true), such as facts and rules.</div></div>
+        <div class="qa-card"><div class="question">6. Define procedural knowledge.</div><div class="answer">Procedural knowledge is information on how to perform a task (knowing "how"), often represented as a sequence of steps, rules, or instructions.</div></div>
+        <div class="qa-card"><div class="question">7. What is a Frame in AI?</div><div class="answer">A frame is an object-oriented data structure used to divide knowledge into substructures by representing stereotyped situations, entities, or concepts.</div></div>
+        <div class="qa-card"><div class="question">8. What is meant by a slot in frame structures?</div><div class="answer">A slot is an attribute or property within a frame. For example, a "Car" frame might have a "Color" slot.</div></div>
+        <div class="qa-card"><div class="question">9. Define Propositional Logic.</div><div class="answer">Propositional Logic is a branch of logic that deals with propositions (statements that are objectively true or false) and their combinations using logical connectives.</div></div>
+        <div class="qa-card"><div class="question">10. What is a proposition?</div><div class="answer">A proposition is a declarative statement that has a definitive truth value—it must be either strictly True or False, but not both.</div></div>
+        <div class="qa-card"><div class="question">11. Name any two logical connectives.</div><div class="answer">1) AND (Conjunction, $\land$) <br> 2) OR (Disjunction, $\lor$).</div></div>
+        <div class="qa-card"><div class="question">12. What is First Order Logic (FOL)?</div><div class="answer">FOL is an expressive logical system extending propositional logic by incorporating objects, predicates (relations), variables, and quantifiers.</div></div>
+        <div class="qa-card"><div class="question">13. What is a predicate?</div><div class="answer">A predicate represents a property of an object or a relationship between multiple objects, evaluating to true or false (e.g., Brother(John, Mary)).</div></div>
+        <div class="qa-card"><div class="question">14. Define quantifiers in FOL.</div><div class="answer">Quantifiers are logical symbols used to specify the scope of truth for a formula over a specific domain of variables.</div></div>
+        <div class="qa-card"><div class="question">15. What is universal quantifier ($\forall$)?</div><div class="answer">The universal quantifier implies that a statement holds True for <strong>all</strong> elements within a particular domain.</div></div>
+        <div class="qa-card"><div class="question">16. What is existential quantifier ($\exists$)?</div><div class="answer">The existential quantifier implies that there exists <strong>at least one</strong> element in the domain for which the statement holds True.</div></div>
+        <div class="qa-card"><div class="question">17. What is inference in AI?</div><div class="answer">Inference is the cognitive or computational process of deriving new knowledge or logical conclusions from existing facts and premises.</div></div>
+        <div class="qa-card"><div class="question">18. What is an inference rule?</div><div class="answer">An inference rule is a standard, logically sound template used to deduce a conclusion from a given set of premises (e.g., Modus Ponens).</div></div>
 
         <h2>B. 5 Mark Questions (Short Answer / Explanation)</h2>
-        
         <div class="qa-card">
             <div class="question">1. Explain Knowledge Representation and its importance in AI.</div>
             <div class="answer">Knowledge Representation (KR) is the field of AI focused on designing formal languages to encode information about the world so that an AI system can utilize it. <strong>Importance:</strong> It forms the backbone of an agent's intelligence. Without proper KR, an agent cannot perform reasoning, learning, or planning. Good KR makes implicit knowledge explicit, reduces computational complexity, and allows the Inference Engine to efficiently deduce solutions.</div>
@@ -787,15 +554,6 @@
         </div>
 
         <div class="qa-card">
-            <div class="question">5. Explain Frame Structures with an example.</div>
-            <div class="answer">A frame is a data structure designed to represent a stereotyped concept or situation. It consists of a collection of attributes called <strong>Slots</strong>, which hold <strong>Fillers</strong> (values). <br>
-            <strong>Example:</strong> A frame for the concept "Bird".<br>
-            - Slot 1: <em>Locomotion</em> | Value: <em>Fly</em><br>
-            - Slot 2: <em>Reproduction</em> | Value: <em>Eggs</em><br>
-            - Slot 3: <em>Is-A</em> | Value: <em>Animal</em> (Inheritance)</div>
-        </div>
-
-        <div class="qa-card">
             <div class="question">6. Compare Propositional Logic and First Order Logic.</div>
             <div class="answer">
                 <ul>
@@ -809,27 +567,6 @@
             <div class="question">7. Explain syntax and semantics of Propositional Logic.</div>
             <div class="answer"><strong>Syntax:</strong> Defines the valid structure of sentences. It includes atomic propositions (A, B) and logical connectives like NOT ($\neg$), AND ($\land$), OR ($\lor$), IMPLIES ($\Rightarrow$), and IFF ($\Leftrightarrow$). Valid sentences must be formed using these symbols properly.<br><br>
             <strong>Semantics:</strong> Defines the meaning or truth value of sentences. Semantics are typically represented using truth tables, which compute the exact truth value of complex propositions based on the truth values of their atomic parts.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">8. Describe predicates, constants, and variables in FOL.</div>
-            <div class="answer">
-                <ul>
-                    <li><strong>Constants:</strong> Specific, named objects in the domain (e.g., <em>John</em>, <em>Earth</em>, <em>Number 5</em>).</li>
-                    <li><strong>Variables:</strong> Placeholders that can represent any object in the domain (e.g., <em>x</em>, <em>y</em>).</li>
-                    <li><strong>Predicates:</strong> Relations or properties that evaluate to True or False when applied to terms. Example: <em>Likes(x, Mary)</em>.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">9. Explain quantifiers in First Order Logic with examples.</div>
-            <div class="answer">
-                <ul>
-                    <li><strong>Universal Quantifier ($\forall$):</strong> Asserts that a condition is true for everything. Example: $\forall x (King(x) \Rightarrow Person(x))$ translates to "All kings are persons."</li>
-                    <li><strong>Existential Quantifier ($\exists$):</strong> Asserts that a condition is true for at least one thing. Example: $\exists x (King(x) \land Greedy(x))$ translates to "There exists some king who is greedy."</li>
-                </ul>
-            </div>
         </div>
 
         <div class="qa-card">
@@ -852,37 +589,7 @@
             </div>
         </div>
 
-        <div class="qa-card">
-            <div class="question">12. Describe deductive reasoning with an example.</div>
-            <div class="answer">Deductive reasoning is a "top-down" logical process that draws specific conclusions from general rules or premises. If the premises are true, the conclusion is guaranteed to be true.<br><br>
-            <strong>Example:</strong> <br>
-            Premise 1: All humans are mortal. <br>
-            Premise 2: Socrates is a human. <br>
-            Conclusion: Therefore, Socrates is mortal.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">13. Explain inductive reasoning and its limitations.</div>
-            <div class="answer">Inductive reasoning is a "bottom-up" approach where specific observations are used to formulate a general rule or theory. <br><br>
-            <strong>Limitations:</strong> Unlike deduction, inductive conclusions are only probable, not guaranteed. Observing 100 white swans leads to the inductive conclusion "All swans are white," but finding a single black swan proves the conclusion false.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">14. Discuss abductive reasoning with an example.</div>
-            <div class="answer">Abductive reasoning is "inference to the best explanation." It starts with an observation and seeks the most likely and simplest explanation for it.<br><br>
-            <strong>Example:</strong> <br>
-            Observation: The grass outside is wet. <br>
-            Known Rule: If it rains, the grass gets wet. <br>
-            Conclusion: It probably rained. (Though a sprinkler could also be the cause, rain is inferred as the most likely explanation).</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">15. Explain the role of reasoning in intelligent systems.</div>
-            <div class="answer">Reasoning allows intelligent systems to move beyond simple reflex actions. It enables them to logically connect facts, deduce unseen truths, solve complex problems, and plan for the future. Without reasoning, AI systems could not handle incomplete information, adapt to new logic puzzles, or provide explanations for their decisions.</div>
-        </div>
-
         <h2>C. 10 Mark Questions (Long Answer / Essay Type)</h2>
-        
         <div class="qa-card">
             <div class="question">1. Explain Knowledge Representation in detail. Discuss its goals, issues, and methods.</div>
             <div class="answer">
@@ -913,69 +620,6 @@
         </div>
 
         <div class="qa-card">
-            <div class="question">3. Explain the architecture and functioning of a Knowledge-Based System with examples.</div>
-            <div class="answer">
-                A <strong>Knowledge-Based System (KBS)</strong> is a broader software architecture (like an Expert System) that applies reasoning. <br><br>
-                <strong>Architecture Components:</strong>
-                <ul>
-                    <li><strong>User Interface:</strong> How the human user communicates with the system.</li>
-                    <li><strong>Knowledge Base (KB):</strong> The domain-specific database of rules and facts.</li>
-                    <li><strong>Inference Engine:</strong> The processor that applies logical rules to the KB to deduce answers.</li>
-                    <li><strong>Knowledge Acquisition Facility:</strong> A module that allows experts to easily add or modify rules without coding.</li>
-                </ul>
-                <strong>Functioning Example:</strong> In a medical diagnosis KBS, a doctor inputs symptoms via the User Interface. The Inference Engine takes these symptoms, compares them against the massive library of medical rules in the KB (e.g., "IF Fever AND Cough THEN suspect Flu"), and outputs a diagnosis back to the doctor.
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">4. Discuss Frame Structures in detail. Explain slots, fillers, inheritance, and advantages.</div>
-            <div class="answer">
-                <strong>Frame Structures</strong> were proposed by Marvin Minsky as a way to group related knowledge. A frame represents an entity or situation.<br><br>
-                <strong>Slots and Fillers:</strong> A frame is made up of slots (properties) and fillers (the values of those properties). For example, a "Professor" frame might have a slot named "Department" with the filler "Computer Science".<br><br>
-                <strong>Inheritance:</strong> Frames use an "IS-A" hierarchy. If we create a frame for "Dog", it can have an IS-A slot pointing to the "Mammal" frame. The Dog frame automatically inherits all slots from the Mammal frame (like "Has_Blood: Warm"), drastically reducing data redundancy.<br><br>
-                <strong>Advantages:</strong> Frames mimic how humans chunk information. They naturally support default values (e.g., a "Car" frame defaults to 4 wheels unless told otherwise), simplify the addition of new objects via inheritance, and organize knowledge neatly for object-oriented programming.
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">5. Explain Propositional Logic in detail, including syntax, semantics, and inference.</div>
-            <div class="answer">
-                <strong>Propositional Logic (PL)</strong> is the simplest logic representing facts that are either True or False.<br><br>
-                <strong>Syntax:</strong> PL defines atomic sentences using proposition symbols (e.g., P, Q). Complex sentences are built using logical connectives: $\neg$ (NOT), $\land$ (AND), $\lor$ (OR), $\Rightarrow$ (IMPLIES), and $\Leftrightarrow$ (BICONDITIONAL). Example syntax: $(P \land Q) \Rightarrow R$.<br><br>
-                <strong>Semantics:</strong> Determines the exact truth of a sentence relative to a model. A truth table defines the semantics for connectives. For instance, $P \land Q$ is semantically True only if both P and Q are True in the real world.<br><br>
-                <strong>Inference:</strong> The process of proving a proposition. It can be done using model-checking (generating full truth tables) or applying standard inference rules like Modus Ponens to legally rewrite statements until the target conclusion is mathematically reached.
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">6. Describe First Order Logic in detail with predicates, quantifiers, and examples.</div>
-            <div class="answer">
-                <strong>First Order Logic (FOL)</strong> solves the expressiveness limits of Propositional Logic by looking inside the sentence to define objects and relations.<br><br>
-                <strong>Components:</strong>
-                <ul>
-                    <li><strong>Objects/Constants:</strong> Specific things (e.g., Alice, Bob).</li>
-                    <li><strong>Variables:</strong> Symbols mapping to any object (e.g., x, y).</li>
-                    <li><strong>Predicates:</strong> Relations that return True/False (e.g., <em>Parent(x, y)</em>).</li>
-                </ul>
-                <strong>Quantifiers:</strong>
-                <ul>
-                    <li><strong>Universal ($\forall$):</strong> "For all". Example: $\forall x (Human(x) \Rightarrow Mortal(x))$ means every human is mortal.</li>
-                    <li><strong>Existential ($\exists$):</strong> "There exists". Example: $\exists x (Student(x) \land Smart(x))$ means there is at least one smart student.</li>
-                </ul>
-                FOL is critical because it allows AI to make broad rules about domains without having to write millions of individual true/false propositions.
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">7. Explain Inference in First Order Logic, including unification and resolution.</div>
-            <div class="answer">
-                Inference in FOL requires manipulating sentences containing variables, which makes it complex.<br><br>
-                <strong>Unification:</strong> This is a core algorithm used to make two different logical expressions look identical by finding suitable substitutions for their variables. If an AI knows <em>Knows(John, x)</em> and receives a query <em>Knows(y, Mary)</em>, unification substitutes $x=Mary$ and $y=John$ so the inference engine can process them as a match.<br><br>
-                <strong>Resolution:</strong> A powerful rule of inference that relies on proof by contradiction. To prove a statement $P$, the AI assumes $\neg P$ (Not P) is true, converts the entire Knowledge Base to a standardized format called Conjunctive Normal Form (CNF), and attempts to resolve clauses until it produces an empty clause (a contradiction). If a contradiction is found, the original assumption ($\neg P$) was wrong, thus proving $P$ is true.
-            </div>
-        </div>
-
-        <div class="qa-card">
             <div class="question">8. What is Reasoning in AI? Explain various types of reasoning with suitable examples.</div>
             <div class="answer">
                 <strong>Reasoning</strong> is the process an AI uses to draw conclusions, make predictions, or construct explanations from existing knowledge.<br><br>
@@ -986,17 +630,6 @@
                     <li><strong>Abductive Reasoning:</strong> Finding the most plausible explanation for an observation. (Fact: The ground is wet. Conclusion: It probably rained.)</li>
                     <li><strong>Monotonic Reasoning:</strong> Once a fact is proven, it cannot be unproven by adding new facts. Traditional logic works this way.</li>
                     <li><strong>Non-Monotonic Reasoning:</strong> Conclusions can be invalidated by new facts. (Fact: Birds fly. Fact: Tweety is a bird. Conclusion: Tweety flies. *New Fact*: Tweety is a penguin. *Updated Conclusion*: Tweety cannot fly.)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">9. Compare deductive, inductive, and abductive reasoning in detail.</div>
-            <div class="answer">
-                <ul>
-                    <li><strong>Deductive Reasoning:</strong> Moves from <em>General &rarr; Specific</em>. It uses established rules to prove a specific case. The conclusion is 100% logically certain if the premises are true. It is heavily used in mathematical proofs and rule-based expert systems.</li>
-                    <li><strong>Inductive Reasoning:</strong> Moves from <em>Specific &rarr; General</em>. It uses specific data points to formulate a broad rule. The conclusion is probabilistic, not guaranteed. It is the foundational reasoning behind Machine Learning and data mining, where algorithms detect patterns in large datasets.</li>
-                    <li><strong>Abductive Reasoning:</strong> Moves from <em>Observation &rarr; Cause (Explanation)</em>. It uses incomplete information to infer the most likely underlying cause. It doesn't guarantee accuracy but is highly practical for everyday decision-making, medical diagnosis (inferring disease from symptoms), and troubleshooting.</li>
                 </ul>
             </div>
         </div>
@@ -1166,16 +799,6 @@
         </div>
 
         <div class="qa-card">
-            <div class="question">17. Compare Software errors and Software faults.</div>
-            <div class="answer">
-                <ul>
-                    <li><strong>Software Error:</strong> An error is a human action or mistake (e.g., a developer writing the wrong logic or syntax) that produces an incorrect result.</li>
-                    <li><strong>Software Fault:</strong> A fault (defect or bug) is the manifestation of that human error within the software code. If an error is made, it results in a fault inside the program.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
             <div class="question">18. Explain the procedure of Manual testing? Mention the advantages.</div>
             <div class="answer">
                 <strong>Procedure:</strong> 1) Analyze requirements. 2) Write test plan and test cases. 3) Set up the testing environment. 4) Execute test cases manually step-by-step as an end-user without automation tools. 5) Log defects for any failed tests. 6) Re-test once fixed. <br><br>
@@ -1197,11 +820,6 @@
                 <br><em>Group 1 (Testing Minimum Boundary):</em> { 4 (Invalid), 5 (Valid-Min), 6 (Valid) }
                 <br><em>Group 2 (Testing Discount Boundary):</em> { 99 (Valid-No Discount), 100 (Valid-Discount-Min), 101 (Valid-Discount) }
             </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">20. Explain the primary goal of AI in SQA?</div>
-            <div class="answer">The primary goal of AI in Software Quality Assurance is to make testing smarter, faster, and more efficient. It aims to automate repetitive tasks, predict defect hotspots based on historical data, self-heal flaky test scripts when UI elements change, and continuously adapt testing strategies to ensure maximum coverage with minimum manual maintenance.</div>
         </div>
 
         <div class="qa-card">
@@ -1243,105 +861,254 @@
             <strong>Demerits:</strong> Extremely rigid; very difficult to go back and change functionality; not suited for dynamic or agile projects.
             </div>
         </div>
+    </div>
+
+
+    <!-- CLOUD COMPUTING MODULE (NEW) -->
+    <div id="cc-module" class="tab-content">
+        <h2>A. Short Answer Questions</h2>
+        
+        <div class="qa-card">
+            <div class="question">1. What is cloud computing?</div>
+            <div class="answer">Cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet ("the cloud") to offer faster innovation, flexible resources, and economies of scale.</div>
+        </div>
 
         <div class="qa-card">
-            <div class="question">22. Construct the Software Testing Life Cycle (STLC).</div>
-            <div class="answer">The activities in STLC include:
+            <div class="question">2. Define Cloud.</div>
+            <div class="answer">A cloud is a global network of remote servers hosted on the internet that are used to store, manage, and process data, rather than using a local server or a personal computer.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">3. Write the differences between IaaS and PaaS.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>IaaS (Infrastructure as a Service):</strong> Provides raw computing resources like virtual machines, networking, and storage. You have to manage the OS and runtime yourself.</li>
+                    <li><strong>PaaS (Platform as a Service):</strong> Provides a complete development environment (OS, runtime, databases) built on top of IaaS. Developers use it to build and deploy apps without worrying about managing the underlying servers.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">4. Mention the differences between SaaS and IaaS.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>SaaS (Software as a Service):</strong> Delivers fully functional software applications directly to end-users over the internet (e.g., Gmail, Google Docs). No IT management required.</li>
+                    <li><strong>IaaS:</strong> Delivers virtualized hardware resources to IT administrators or developers who use it to build their own systems and software.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">5. State the purpose of Hypervisor.</div>
+            <div class="answer">A hypervisor (or Virtual Machine Monitor) is software that creates, runs, and manages virtual machines (VMs). Its main purpose is to isolate the VMs from one another and dynamically allocate the physical hardware resources (CPU, RAM) to them safely and efficiently.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">6. What is Virtualization?</div>
+            <div class="answer">Virtualization is the process of creating a software-based (virtual) representation of something rather than a physical one. It can apply to applications, servers, storage, and networks.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">7. Mention three major components of Virtualized Environments.</div>
+            <div class="answer">1) The Hardware (Host Machine), 2) The Hypervisor / VMM (Virtual Machine Monitor), and 3) The Virtual Machine (Guest OS and Applications).</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">8. What is Virtualization Layer?</div>
+            <div class="answer">The virtualization layer is a software layer (typically the hypervisor) that sits between the physical hardware and the operating systems. It abstracts the physical hardware resources so they can be partitioned and shared among multiple virtual machines.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">9. List out the Characteristics of Virtualized Environments.</div>
+            <div class="answer">The key characteristics are: 1) Increased Security/Isolation, 2) Encapsulation of VMs into files, 3) Hardware Independence, 4) Multiplexing and Resource Sharing, and 5) Portability/Migration.</div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">10. What do you mean by deployment models / software?</div>
+            <div class="answer">Cloud deployment models indicate where the infrastructure resides and who manages it. The four primary deployment models are Public Cloud, Private Cloud, Hybrid Cloud, and Community Cloud.</div>
+        </div>
+
+        <h2>B. Detailed / Essay Type Questions</h2>
+
+        <div class="qa-card">
+            <div class="question">1. Briefly describe the architecture of cloud computing with diagram.</div>
+            <div class="answer">Cloud computing architecture is divided into two main sections connected via the internet:
+                <ul>
+                    <li><strong>Front-End (Client side):</strong> The interface and applications that the user interacts with (e.g., a web browser or mobile app).</li>
+                    <li><strong>Back-End (Cloud provider side):</strong> The massive pool of resources including servers, storage systems, databases, security mechanisms, and management models.</li>
+                </ul>
+                <div style="text-align: center; margin: 25px 0;">
+                    <svg width="100%" style="max-width: 500px;" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="80" width="100" height="60" fill="#1e1e1e" stroke="#03dac6" stroke-width="2" rx="8"/>
+                        <text x="70" y="105" fill="#e0e0e0" font-family="Inter" font-size="14px" font-weight="bold" text-anchor="middle">Front-End</text>
+                        <text x="70" y="125" fill="#aaa" font-family="Inter" font-size="11px" text-anchor="middle">(Client/Browser)</text>
+                        
+                        <!-- Internet Cloud -->
+                        <path d="M 170 110 C 170 90, 190 80, 210 90 C 230 70, 260 80, 270 100 C 290 90, 310 110, 300 130 C 310 150, 280 160, 260 145 C 240 160, 200 150, 200 135 C 180 140, 160 120, 170 110 Z" fill="#2c2c2c" stroke="#bb86fc" stroke-width="2"/>
+                        <text x="240" y="125" fill="#e0e0e0" font-family="Inter" font-size="14px" font-weight="bold" text-anchor="middle">Internet</text>
+
+                        <!-- Back End -->
+                        <rect x="350" y="20" width="130" height="180" fill="#1e1e1e" stroke="#cf6679" stroke-width="2" rx="8"/>
+                        <text x="415" y="45" fill="#e0e0e0" font-family="Inter" font-size="14px" font-weight="bold" text-anchor="middle">Back-End</text>
+                        <rect x="365" y="60" width="100" height="30" fill="#2a2a2a" stroke="#03dac6" rx="4"/>
+                        <text x="415" y="80" fill="#aaa" font-family="Inter" font-size="12px" text-anchor="middle">Applications</text>
+                        <rect x="365" y="100" width="100" height="30" fill="#2a2a2a" stroke="#03dac6" rx="4"/>
+                        <text x="415" y="120" fill="#aaa" font-family="Inter" font-size="12px" text-anchor="middle">Services/DB</text>
+                        <rect x="365" y="140" width="100" height="30" fill="#2a2a2a" stroke="#03dac6" rx="4"/>
+                        <text x="415" y="160" fill="#aaa" font-family="Inter" font-size="12px" text-anchor="middle">Storage</text>
+
+                        <!-- Connections -->
+                        <path d="M 120 110 L 170 110" stroke="#bb86fc" stroke-width="2" stroke-dasharray="4"/>
+                        <path d="M 300 110 L 350 110" stroke="#bb86fc" stroke-width="2" stroke-dasharray="4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">2. Discuss the public, private, community, and hybrid deployment models.</div>
+            <div class="answer">
+                <ul>
+                    <li><strong>Public Cloud:</strong> Services are owned and operated by a third-party provider and delivered over the public internet (e.g., AWS, Google Cloud). Highly scalable and cost-effective, but offers less control.</li>
+                    <li><strong>Private Cloud:</strong> Cloud infrastructure used exclusively by a single business or organization. It can be physically located at the company's on-site datacenter. Offers maximum control and security, but is expensive.</li>
+                    <li><strong>Community Cloud:</strong> Infrastructure shared by several organizations that have shared concerns (e.g., compliance, security). It is managed by the organizations or a third party.</li>
+                    <li><strong>Hybrid Cloud:</strong> Combines public and private clouds, bound together by technology that allows data and applications to be shared between them. Gives businesses greater flexibility and more deployment options.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">3. Demonstrate the Services offered by Cloud providers in detail with a diagram.</div>
+            <div class="answer">Cloud services are typically divided into a stack of three broad categories:
+                <ul>
+                    <li><strong>IaaS (Infrastructure as a Service):</strong> At the base, it provides the fundamental hardware—servers, virtual machines, storage, and networks.</li>
+                    <li><strong>PaaS (Platform as a Service):</strong> In the middle, it provides an environment for developers to build, test, and deploy software applications without managing the underlying servers.</li>
+                    <li><strong>SaaS (Software as a Service):</strong> At the top, it provides a complete, ready-to-use software application delivered over the internet (e.g., Microsoft 365, Salesforce).</li>
+                </ul>
+                <div style="text-align: center; margin: 25px 0;">
+                    <svg width="100%" style="max-width: 400px;" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Triangle Base / IaaS -->
+                        <polygon points="50,200 350,200 290,140 110,140" fill="#1e1e1e" stroke="#bb86fc" stroke-width="2"/>
+                        <text x="200" y="175" fill="#e0e0e0" font-family="Inter" font-size="16px" font-weight="bold" text-anchor="middle">IaaS</text>
+                        <text x="200" y="190" fill="#aaa" font-family="Inter" font-size="11px" text-anchor="middle">(Servers, Storage, Network)</text>
+
+                        <!-- Triangle Middle / PaaS -->
+                        <polygon points="110,140 290,140 230,80 170,80" fill="#2a2a2a" stroke="#03dac6" stroke-width="2"/>
+                        <text x="200" y="115" fill="#e0e0e0" font-family="Inter" font-size="16px" font-weight="bold" text-anchor="middle">PaaS</text>
+                        <text x="200" y="130" fill="#aaa" font-family="Inter" font-size="11px" text-anchor="middle">(OS, Database, Dev Tools)</text>
+
+                        <!-- Triangle Top / SaaS -->
+                        <polygon points="170,80 230,80 200,20" fill="#2c2c2c" stroke="#cf6679" stroke-width="2"/>
+                        <text x="200" y="65" fill="#e0e0e0" font-family="Inter" font-size="16px" font-weight="bold" text-anchor="middle">SaaS</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">4. Illustrate any five benefits and Limitations of cloud computing.</div>
+            <div class="answer">
+                <strong>Benefits:</strong>
                 <ol>
-                    <li><strong>Requirement Analysis:</strong> Testers analyze requirements to identify testable elements.</li>
-                    <li><strong>Test Planning:</strong> Strategy is defined, effort is estimated, and resources are planned.</li>
-                    <li><strong>Test Case Development:</strong> Creating, verifying, and preparing test cases and test data.</li>
-                    <li><strong>Environment Setup:</strong> Configuring the hardware and software conditions for testing.</li>
-                    <li><strong>Test Execution:</strong> Running the tests, logging results, and raising defects for failures.</li>
-                    <li><strong>Test Cycle Closure:</strong> Evaluating cycle completion criteria, generating test metrics, and preparing the test summary report.</li>
+                    <li><strong>Cost Efficiency:</strong> Eliminates capital expense of buying hardware and data centers (Pay-as-you-go).</li>
+                    <li><strong>Scalability:</strong> Resources can be scaled up or down instantly based on demand.</li>
+                    <li><strong>Accessibility:</strong> Data and applications can be accessed from anywhere with an internet connection.</li>
+                    <li><strong>Disaster Recovery:</strong> Cloud data backup makes recovery from hardware failures much easier.</li>
+                    <li><strong>Automatic Updates:</strong> Software and security patches are updated by the provider automatically.</li>
+                </ol>
+                <strong>Limitations:</strong>
+                <ol>
+                    <li><strong>Internet Dependency:</strong> You cannot access your data or applications without a stable network.</li>
+                    <li><strong>Security and Privacy:</strong> Entrusting sensitive data to third-party providers raises security risks.</li>
+                    <li><strong>Vendor Lock-in:</strong> It can be difficult and expensive to migrate from one cloud provider to another.</li>
+                    <li><strong>Limited Control:</strong> The customer has limited control and access to the backend infrastructure.</li>
+                    <li><strong>Downtime:</strong> Even the biggest cloud providers experience occasional outages.</li>
                 </ol>
             </div>
         </div>
 
         <div class="qa-card">
-            <div class="question">23. Contrast AI-based test automation from traditional test automation.</div>
+            <div class="question">5. Examine and Explain the needs of hypervisor and their types with diagram.</div>
+            <div class="answer">
+                <strong>Needs of a Hypervisor:</strong> A hypervisor is essential because it safely isolates different operating systems running on the same hardware. It handles the dynamic allocation of CPU, memory, and storage to each virtual machine, ensuring that a crash in one VM does not affect the others.
+                <br><br><strong>Types of Hypervisors:</strong>
+                <ul>
+                    <li><strong>Type 1 (Bare-Metal):</strong> Installed directly on the physical hardware. Highly efficient and secure. Used in enterprise data centers (e.g., VMware ESXi).</li>
+                    <li><strong>Type 2 (Hosted):</strong> Installed on top of an existing host operating system (like Windows or Mac). Slower, but great for personal testing and development (e.g., VirtualBox, VMware Workstation).</li>
+                </ul>
+                <div style="text-align: center; margin: 25px 0;">
+                    <svg width="100%" style="max-width: 600px;" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+                        <!-- TYPE 1 -->
+                        <text x="150" y="20" fill="#bb86fc" font-family="Inter" font-size="16px" font-weight="bold" text-anchor="middle">Type 1 (Bare-Metal)</text>
+                        <rect x="50" y="160" width="200" height="30" fill="#1e1e1e" stroke="#cf6679" stroke-width="2" rx="4"/>
+                        <text x="150" y="180" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle">Hardware</text>
+                        <rect x="50" y="120" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="2" rx="4"/>
+                        <text x="150" y="140" fill="#e0e0e0" font-family="Inter" font-size="12px" font-weight="bold" text-anchor="middle">Hypervisor</text>
+                        <rect x="50" y="40" width="90" height="70" fill="#2c2c2c" stroke="#bb86fc" stroke-width="1.5" rx="4"/>
+                        <text x="95" y="65" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle">App</text>
+                        <text x="95" y="95" fill="#aaa" font-family="Inter" font-size="11px" text-anchor="middle">Guest OS 1</text>
+                        <rect x="160" y="40" width="90" height="70" fill="#2c2c2c" stroke="#bb86fc" stroke-width="1.5" rx="4"/>
+                        <text x="205" y="65" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle">App</text>
+                        <text x="205" y="95" fill="#aaa" font-family="Inter" font-size="11px" text-anchor="middle">Guest OS 2</text>
+
+                        <!-- TYPE 2 -->
+                        <text x="450" y="20" fill="#03dac6" font-family="Inter" font-size="16px" font-weight="bold" text-anchor="middle">Type 2 (Hosted)</text>
+                        <rect x="350" y="160" width="200" height="30" fill="#1e1e1e" stroke="#cf6679" stroke-width="2" rx="4"/>
+                        <text x="450" y="180" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle">Hardware</text>
+                        <rect x="350" y="120" width="200" height="30" fill="#2c2c2c" stroke="#cf6679" stroke-width="2" rx="4"/>
+                        <text x="450" y="140" fill="#e0e0e0" font-family="Inter" font-size="12px" text-anchor="middle">Host Operating System</text>
+                        <rect x="350" y="80" width="200" height="30" fill="#2a2a2a" stroke="#03dac6" stroke-width="2" rx="4"/>
+                        <text x="450" y="100" fill="#e0e0e0" font-family="Inter" font-size="12px" font-weight="bold" text-anchor="middle">Hypervisor</text>
+                        <rect x="350" y="40" width="90" height="30" fill="#2c2c2c" stroke="#bb86fc" stroke-width="1.5" rx="4"/>
+                        <text x="395" y="60" fill="#e0e0e0" font-family="Inter" font-size="11px" text-anchor="middle">Guest OS 1</text>
+                        <rect x="460" y="40" width="90" height="30" fill="#2c2c2c" stroke="#bb86fc" stroke-width="1.5" rx="4"/>
+                        <text x="505" y="60" fill="#e0e0e0" font-family="Inter" font-size="11px" text-anchor="middle">Guest OS 2</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">6. Elaborate the five Levels of Virtualization and their functionalities (Machine Reference Model).</div>
+            <div class="answer">The Taxonomy of Virtualization Techniques divides virtualization into 5 functional levels:
+                <ol>
+                    <li><strong>Instruction Set Architecture (ISA) Level:</strong> Virtualization is performed by emulating a given ISA. It allows executing legacy code compiled for one processor on a different processor.</li>
+                    <li><strong>Hardware Abstraction Level (HAL):</strong> Virtualization is performed right above the bare hardware. This is where hypervisors (VMMs) operate, generating virtual hardware environments for VMs.</li>
+                    <li><strong>Operating System Level:</strong> Creates isolated containers or "jails" on a single physical server and OS instance. All virtualized environments share the same underlying OS kernel (e.g., Docker).</li>
+                    <li><strong>Library Support Level:</strong> Virtualization by intercepting library calls. It creates execution environments for applications by emulating APIs (e.g., WINE allowing Windows apps to run on Linux).</li>
+                    <li><strong>User-Application Level:</strong> Virtualizes an application so it behaves like a standalone runtime environment. (e.g., Java Virtual Machine - JVM).</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">7. Demonstrate how to perform hardware virtualization with examples.</div>
+            <div class="answer">Hardware virtualization involves abstracting physical hardware into virtual instances using a Hypervisor. There are three main approaches:
+                <ul>
+                    <li><strong>Full Virtualization:</strong> The hypervisor completely simulates hardware. The Guest OS is entirely unaware it is virtualized and does not need modification. (Example: VMware ESXi).</li>
+                    <li><strong>Para-virtualization:</strong> The Guest OS is modified to know it is running in a virtual environment. Instead of simulating hardware, the Guest OS communicates directly with the hypervisor, offering better performance. (Example: Xen).</li>
+                    <li><strong>Hardware-Assisted Virtualization:</strong> Physical CPUs have built-in instructions to assist virtualization, taking the heavy processing load off the hypervisor software. (Example: Intel VT-x and AMD-V).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card">
+            <div class="question">8. Analyze the concepts of Network virtualization and Storage virtualization.</div>
             <div class="answer">
                 <ul>
-                    <li><strong>Traditional Automation:</strong> Script-based and rigid. If a UI element ID changes on the web page, the test script breaks and requires manual maintenance by a developer.</li>
-                    <li><strong>AI-based Automation:</strong> Uses "self-healing" technology. It understands the underlying DOM visually. If an element moves or its ID changes, the AI automatically identifies the new element and updates the test dynamically without human intervention.</li>
+                    <li><strong>Network Virtualization:</strong> Abstracting physical network resources (routers, switches) into a single software-based administrative entity. It allows multiple isolated virtual networks to run over the same physical network. Example: Software-Defined Networking (SDN) and VLANs.</li>
+                    <li><strong>Storage Virtualization:</strong> Pooling physical storage from multiple network storage devices into what appears to be a single, centrally managed storage device. It helps in easy backup, archiving, and recovery. Example: Storage Area Networks (SAN).</li>
                 </ul>
             </div>
         </div>
 
         <div class="qa-card">
-            <div class="question">24. Explain Rapid Application Development (RAD)?</div>
-            <div class="answer">RAD is an agile project management strategy popular in software development. It prioritizes rapid prototyping and iterative delivery over strict, prolonged planning. It allows developers to quickly adjust to changing requirements based on immediate user feedback by building components in parallel.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">25. Relate Quality assurance with Quality control. Justify your answer that QA is not QC.</div>
-            <div class="answer">While both aim to deliver a quality product, they are distinct:
-                <ul>
-                    <li><strong>Quality Assurance (QA):</strong> is <em>preventive</em> and <em>process-oriented</em>. It focuses on setting up correct methodologies, standards, and processes to prevent defects from occurring during development.</li>
-                    <li><strong>Quality Control (QC):</strong> is <em>reactive</em> and <em>product-oriented</em>. It focuses on executing tests (Software Testing) on the finished product to identify and fix defects before release.</li>
-                </ul>
-                <strong>Justification:</strong> QA ensures you are doing the right things in the right way, whereas QC verifies that the results of what you've done are exactly what was expected.
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">26. List out Test Deliverables with brief explanation.</div>
+            <div class="question">9. Illustrate the types of Server virtualization, Desktop virtualization and Data virtualization.</div>
             <div class="answer">
                 <ul>
-                    <li><strong>Test Plan:</strong> Document detailing the scope, approach, and resources.</li>
-                    <li><strong>Test Cases/Scripts:</strong> Specific steps, inputs, and expected outcomes.</li>
-                    <li><strong>RTM:</strong> Document tracing requirements to test cases.</li>
-                    <li><strong>Defect Report:</strong> Log detailing the bugs found during execution.</li>
-                    <li><strong>Test Summary Report:</strong> Final document summarizing testing activities and final software quality metric.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">28. Illustrate boundary value test cases for a Pizza delivery app (Valid 1 to 10).</div>
-            <div class="answer">
-                <strong>Conditions:</strong> 1 to 10 (Valid). 11 to 99 (Invalid).<br>
-                <strong>Boundary Values to Test:</strong> 0, 1, 2, 9, 10, 11, 99, 100.<br>
-                <strong>Test Cases:</strong>
-                <ul>
-                    <li>Input: 0 &rarr; Expected: ERROR (Below minimum boundary)</li>
-                    <li>Input: 1 &rarr; Expected: ORDER SUCCESS (Valid Minimum)</li>
-                    <li>Input: 2 &rarr; Expected: ORDER SUCCESS (Valid Minimum + 1)</li>
-                    <li>Input: 9 &rarr; Expected: ORDER SUCCESS (Valid Maximum - 1)</li>
-                    <li>Input: 10 &rarr; Expected: ORDER SUCCESS (Valid Maximum)</li>
-                    <li>Input: 11 &rarr; Expected: ERROR "Only 10 Pizza can be ordered" (Invalid Minimum)</li>
-                    <li>Input: 99 &rarr; Expected: ERROR "Only 10 Pizza can be ordered" (Invalid Maximum)</li>
-                    <li>Input: 100 &rarr; Expected: ERROR (Above maximum boundary)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">30. Construct BVA with an example.</div>
-            <div class="answer">Boundary Value Analysis focuses on the edges of equivalence classes. <br>
-            <strong>Example:</strong> A system accepts a password length of 6 to 12 characters.<br>
-            <strong>Boundaries:</strong> Lower boundary = 6. Upper boundary = 12.<br>
-            <strong>BVA Test Inputs:</strong>
-            <ul>
-                <li>Lower Boundary check: 5 (Invalid), 6 (Valid), 7 (Valid).</li>
-                <li>Upper Boundary check: 11 (Valid), 12 (Valid), 13 (Invalid).</li>
-            </ul>
-            </div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">32. Explain the AI driven test effectiveness measurement.</div>
-            <div class="answer">AI-driven test effectiveness measurement involves using machine learning to analyze massive amounts of test execution data, code coverage, and production defects. The AI predicts how effectively a current test suite can catch future bugs, identifies redundant test cases that don't add value, and flags code areas that are highly vulnerable but poorly covered by tests.</div>
-        </div>
-
-        <div class="qa-card">
-            <div class="question">33. Demonstrate the tasks of Test Closure activities in Software Testing?</div>
-            <div class="answer">Test Closure is the final phase of STLC. Tasks include:
-                <ul>
-                    <li>Checking if all planned tests have run and testing criteria are met.</li>
-                    <li>Documenting lessons learned and best practices for future projects.</li>
-                    <li>Archiving test environments, test cases, and test data (Testware).</li>
-                    <li>Preparing and distributing the final <strong>Test Summary Report</strong> to stakeholders.</li>
+                    <li><strong>Server Virtualization:</strong> Masking physical server resources from users. It involves dividing a single physical server into multiple isolated virtual servers. This increases hardware utilization and saves space/power.</li>
+                    <li><strong>Desktop Virtualization:</strong> Also known as VDI (Virtual Desktop Infrastructure). It hosts a desktop operating system (like Windows 10) within a virtual machine running on a centralized server. Users can access their "desktop" from any thin client or device remotely.</li>
+                    <li><strong>Data Virtualization:</strong> An approach to data management that allows an application to retrieve and manipulate data without requiring technical details about the data, such as how it is formatted at the source or where it is physically located.</li>
                 </ul>
             </div>
         </div>
@@ -1367,7 +1134,7 @@
             document.getElementById(tabId).classList.add('active');
             element.classList.add('active');
             
-            // Re-render math processing if MathJax is available (helpful for toggling content)
+            // Re-render math processing if MathJax is available
             if (window.MathJax) {
                 MathJax.typesetPromise();
             }
